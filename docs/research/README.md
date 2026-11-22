@@ -25,3 +25,5 @@ This folder separates historical research from the working browser prototype. It
 4. Do not infer a person's MOSAIC-specific work from their company title.
 5. Preserve conflicting specifications with their source context; do not silently choose one.
 6. Never publish Wi-Fi passwords, private credentials, or private media.
+
+- [Original iOS app analysis notebook](ios-app-analysis.md) — screen-by-screen walkthrough, safe app-data inspection, network observations, and behavior map.
