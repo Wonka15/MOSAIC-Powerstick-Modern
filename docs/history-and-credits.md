@@ -10,16 +10,20 @@ MOSAIC was presented in 2015 as a combination portable charger and wireless medi
 
 - **July 21, 2015:** Android Authority coverage reported that MOSAIC had launched on Kickstarter.
 - The article describes the product concept and early advertised capabilities, and links to the original campaign video hosted by Kickstarter's media CDN.
-- The original Kickstarter campaign page and its final funding total/backer count have not yet been independently recovered. Do not add a campaign total, backer count, or pledge outcome until the original campaign page or a reliable archived copy is located.
-- Kickstarter backers should be credited collectively as part of the product's crowdfunding history once campaign records are verified. Do not invent individual backer names.
+- The original campaign is now identified: [MOSAIC: Make Your Phone Amazing in the Ways It's Not](https://www.kickstarter.com/projects/1753158/mosaic-make-your-phone-amazing-in-the-ways-its-not/).
+- The project’s [Community page](https://www.kickstarter.com/projects/1753158/mosaic-make-your-phone-amazing-in-the-ways-its-not/community) is preserved as a direct route to the backer/community discussion.
+- The supplied [Kickstarter project update #1326601](https://www.kickstarter.com/projects/1753158/mosaic-make-your-phone-amazing-in-the-ways-its-not/posts/1326601) is preserved as a primary campaign source. Review its text and comments for milestones, delivery information, and named contributors before summarizing.
+- The final funding total, backer count, and pledge outcome have not been verified from the accessible page content in this research pass. Do not invent these figures.
+- Kickstarter backers should be credited collectively as part of the product's crowdfunding history; individual backer names should only be listed with permission or where the campaign explicitly publishes them.
 
 Source: [Android Authority / AIVAnet, “Mosaic battery, storage and WiFi pack hits Kickstarter” (July 21, 2015)](https://www.aivanet.com/2015/07/mosaic-battery-storage-and-wifi-pack-hits-kickstarter/).
 
 ## Company
 
-The 2015 coverage identifies PowerStick as the designer of MOSAIC. PowerStick's current public website continues to present the PowerStick company and its team. A 2016 Ottawa Business Journal profile describes the company as founded by Nigel Harris and reports that MOSAIC was assembled in Ottawa at that time.
+The 2015 coverage identifies PowerStick as the designer of MOSAIC. PowerStick's current official website is [powerstick.com](https://powerstick.com). Its current public positioning emphasizes branded merchandise, chargers, speakers, trackers, notebooks, and packaging; the site also says “PowerStick is evolving” and promotes its PWR+ mark. This documents the company's present-day public identity, which is broader than the original MOSAIC consumer gadget. A 2016 Ottawa Business Journal profile describes the company as founded by Nigel Harris and reports that MOSAIC was assembled in Ottawa at that time.
 
 Sources:
+- [PowerStick — current official website](https://powerstick.com)
 - [PowerStick — Our Team](https://powerstick.com/our-team)
 - [Ottawa Business Journal, “Feature: Powerstick, made in Ottawa, no kidding?” (November 26, 2016)](https://obj.ca/feature-powerstick-made-in-ottawa-no-kidding/)
 
@@ -35,6 +39,10 @@ Sources:
 - [PowerStick — Our Team](https://powerstick.com/our-team)
 - [FCC equipment filing: PowerStick.com Inc. (2024)](https://fcc.report/FCC-ID/2AITN-PRESTO/7586842.pdf)
 
+## Current company website
+
+The company's current official website is [https://powerstick.com](https://powerstick.com). It currently presents PowerStick as a branded-merchandise and technology-accessories business, with chargers, speakers, trackers, notebooks, packaging, and a PWR+ brand evolution message. Preserve this as a snapshot of the present-day company, not as evidence that MOSAIC PSTR2 support or its original app remains active.
+
 ## Video archive
 
 These original YouTube sources are embedded on the project website. The video IDs are preserved here so that the references remain discoverable even if the page layout changes.
@@ -47,7 +55,7 @@ These original YouTube sources are embedded on the project website. The video ID
 
 ## Open research checklist
 
-- [ ] Recover the original MOSAIC Kickstarter campaign URL and archived campaign page.
+- [x] Identify the original MOSAIC Kickstarter campaign URL, community page, and supplied project update.
 - [ ] Record campaign goal, amount pledged, backer count, dates, and reward tiers directly from the campaign record.
 - [ ] Transcribe the titles, creators, dates, and descriptions of all three supplied videos.
 - [ ] Review the videos for direct statements about the crowdfunding campaign and backers.
