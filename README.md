@@ -12,6 +12,10 @@ Keep the original app's approachable character:
 
 Modernize it with responsive layouts, accessible controls, larger touch targets, and a cleaner media library.
 
+## MOSAIC Wi-Fi launch experience
+
+The home page now includes a gateway launcher for users who have manually joined the PSTR2 Wi-Fi. It opens the known gateway address (`http://192.168.10.1/`) in a separate tab so the companion page stays open. This is a first-step navigation aid, **not automatic Wi-Fi detection or a live file connection**. See [the Wi-Fi launch and captive-portal feasibility notes](docs/research/wifi-launch-and-captive-portal.md).
+
 ## What currently works
 
 - Responsive home screen and bottom navigation
@@ -38,6 +42,7 @@ docs/code-map.md                   Beginner guide to the code and comment labels
 docs/history-and-credits.md        Product history, company, people, and video sources
 docs/research/README.md            Research archive guide and evidence standards
 docs/research/ios-app-analysis.md   Original iOS app investigation notebook
+docs/research/wifi-launch-and-captive-portal.md  Wi-Fi launch flow and browser limitations
 docs/research/kickstarter-and-timeline.md  Campaign record, chronology, and spec comparisons
 ```
 
