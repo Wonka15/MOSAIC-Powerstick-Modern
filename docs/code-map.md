@@ -10,6 +10,7 @@ Welcome! This page explains where things live in Mosaic Powerstick Modern. You d
 | Change colors, spacing, or mobile layout | `css/styles.css` |
 | Change what buttons do | `js/app.js` |
 | Understand the Powerstick itself | `docs/protocol-notes.md` |
+| Read the hardware, chip, FCC, and company-history investigation | `docs/hardware-and-company-history.md` |
 
 ## How the website fits together
 
