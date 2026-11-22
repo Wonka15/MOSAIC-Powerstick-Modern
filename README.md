@@ -29,7 +29,8 @@ The next research step is to inspect the original app's network behavior and det
 ## Project map
 
 ```text
-index.html                         Page structure, buttons, and content areas
+index.html                         Companion app prototype and home page
+research.html                      Standalone, mobile-friendly history archive
 css/styles.css                     Colors, spacing, cards, and responsive layout
 js/app.js                          Navigation, demo files, and local video player
 docs/protocol-notes.md             Confirmed facts and unknown device behavior
@@ -77,6 +78,6 @@ Search the repository for a hashtag to find related code. See [docs/code-map.md]
 
 ## History, Kickstarter & engineering credits
 
-The website includes a historical archive with three embedded source videos and links to the original Kickstarter community and update. The research notes separate campaign-era advertising, later hands-on reporting, the physical PSTR2 label, current company information, and verified versus unverified engineering credits.
+The companion app links to a separate, mobile-friendly research page (`research.html`) with clear entry points for the campaign timeline, company background, engineering credits, and three embedded source videos. The research notes separate campaign-era advertising, later hands-on reporting, the physical PSTR2 label, current company information, and verified versus unverified engineering credits.
 
 Start with [docs/research/README.md](docs/research/README.md), then read [the Kickstarter record and product timeline](docs/research/kickstarter-and-timeline.md) and [history and credits](docs/history-and-credits.md). Funding totals, backer counts, video metadata, and MOSAIC-specific individual contributions remain open until confirmed by primary sources.
