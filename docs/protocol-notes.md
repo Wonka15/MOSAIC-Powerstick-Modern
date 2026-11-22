@@ -19,8 +19,12 @@
 - The phone remained connected to the MOSAIC Wi-Fi while testing the gateway.
 - Browsing to `http://192.168.10.1/` produced a browser username/password authentication prompt.
 - The user reports that **username `admin` and password `admin`** dismissed the prompt.
-- After authentication, the browser displayed only the text/address **192.168.10.1**, rather than a recognizable file browser or dashboard.
-- The user subsequently reported seeing two labels/options: **“Connect to Internet”** and **“Mosaic Security.”** Their exact screen location and function have not yet been established; do not assume these are menu items, Wi-Fi networks, or services until a screenshot confirms it.
+- The user later supplied a screenshot of the authenticated page at **192.168.10.1**. It shows a branded **MOSAIC by Powerstick** landing page with two large selectable tiles:
+  - **Connect to Internet** (orange tile with a globe icon)
+  - **MOSAIC Security** (teal tile with a padlock icon)
+- The screenshot's browser address bar shows **192.168.10.1**. This confirms that the local gateway serves a graphical MOSAIC landing page after authentication.
+- The earlier report that only the IP address appeared was an incomplete/temporary observation; the later screenshot is stronger evidence of the actual landing page.
+- The screenshot does not show what either tile does. Their workflows and effects remain unverified.
 
 ### Important interpretation
 The login prompt and its dismissal are useful evidence that a service at the local gateway is requesting HTTP-style browser authentication. The bare IP text displayed afterward does **not** establish that file browsing, streaming, or a complete web administration interface is available at the root path. The exact server software, authentication realm, and other endpoints remain unknown.
@@ -36,7 +40,7 @@ The user observed `admin` / `admin` working to dismiss the local prompt on this 
 - MP4 playback supports pause, resume, and seeking.
 
 ## Unknown — investigate before implementing
-- Whether the root response containing `192.168.10.1` is intentional, a redirect/fallback, or a minimal diagnostic response
+- What the **Connect to Internet** and **MOSAIC Security** tiles do, and which settings or workflows they open
 - HTTP endpoints and authentication requirements beyond the observed root prompt
 - Whether the device serves WebDAV, SMB, HTTP, or a proprietary API
 - Whether video playback uses HTTP byte-range requests
@@ -46,11 +50,12 @@ The user observed `admin` / `admin` working to dismiss the local prompt on this 
 - What “Connect to Internet” and “Mosaic Security” refer to in the user's current screen
 
 ## Safe investigation plan
-1. Preserve screenshots of the login prompt and the page shown after authentication.
-2. Record where “Connect to Internet” and “Mosaic Security” appear, with a screenshot that does not expose passwords or private network information.
-3. Record the steps and screens used by the original app to browse a folder and play an MP4, if the app can still be run.
-4. Inspect only normal, read-only network traffic where permitted.
-5. Document request paths, methods, response types, and headers without recording passwords or private file contents.
-6. Test read-only endpoints before attempting any write operation.
+1. Preserve screenshots of the login prompt and the authenticated MOSAIC landing page.
+2. Inspect **Connect to Internet** first only if you can do so without changing settings; document the screen it opens and stop before applying changes.
+3. Inspect **MOSAIC Security** similarly; document the screen and stop before changing passwords, encryption or network settings.
+4. Record the steps and screens used by the original app to browse a folder and play an MP4, if the app can still be run.
+5. Inspect only normal, read-only network traffic where permitted.
+6. Document request paths, methods, response types, and headers without recording passwords or private file contents.
+7. Test read-only endpoints before attempting any write operation.
 
 Never publish the Wi-Fi password, private file names, session tokens, authenticated request captures, or media URLs.
