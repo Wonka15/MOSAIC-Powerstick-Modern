@@ -808,3 +808,43 @@ a:focus-visible {
     gap: 6px;
   }
 }
+
+
+/* 🟦 #ARCHIVE_ACCESS — Make the standalone research page easy to discover. */
+.topbar-archive-link {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 9px 12px;
+  border: 1px solid #ffffff70;
+  border-radius: 10px;
+  background: #ffffff18;
+  white-space: nowrap;
+}
+.topbar-archive-link:hover {
+  background: #ffffff30;
+}
+a.soft-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.archive-shortcut {
+  color: #36738a;
+}
+@media (max-width: 720px) {
+  .topbar-archive-link {
+    margin-left: auto;
+    padding: 8px 9px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 420px) {
+  .topbar-archive-link {
+    max-width: 116px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
