@@ -2,6 +2,10 @@
 
 This document preserves the product's origin story and the people and organization associated with it. It is intentionally conservative: a company job title is not proof of a person's specific contribution to every product.
 
+## Research navigation
+
+For a structured campaign record, reported product specifications, chronology, source register, and unresolved questions, see [the MOSAIC research archive](research/README.md) and [Kickstarter record and product timeline](research/kickstarter-and-timeline.md).
+
 ## The product
 
 MOSAIC was presented in 2015 as a combination portable charger and wireless media-storage device. Contemporary launch coverage described a 4,500 mAh battery, flash-storage configurations, built-in Wi-Fi, and media sharing with multiple devices. The PSTR2 device label in this repository independently identifies the product as **MOSAIC POWERSTREAM**, branded **Powerstick.com**.
@@ -12,7 +16,7 @@ MOSAIC was presented in 2015 as a combination portable charger and wireless medi
 - The article describes the product concept and early advertised capabilities, and links to the original campaign video hosted by Kickstarter's media CDN.
 - The original campaign is now identified: [MOSAIC: Make Your Phone Amazing in the Ways It's Not](https://www.kickstarter.com/projects/1753158/mosaic-make-your-phone-amazing-in-the-ways-its-not/).
 - The project’s [Community page](https://www.kickstarter.com/projects/1753158/mosaic-make-your-phone-amazing-in-the-ways-its-not/community) is preserved as a direct route to the backer/community discussion.
-- The supplied [Kickstarter project update #1326601](https://www.kickstarter.com/projects/1753158/mosaic-make-your-phone-amazing-in-the-ways-its-not/posts/1326601) is preserved as a primary campaign source. Review its text and comments for milestones, delivery information, and named contributors before summarizing.
+- The supplied [Kickstarter project update #1326601](https://www.kickstarter.com/projects/1753158/mosaic-make-your-phone-amazing-in-the-ways-its-not/posts/1326601) is preserved as a primary campaign source.
 - The final funding total, backer count, and pledge outcome have not been verified from the accessible page content in this research pass. Do not invent these figures.
 - Kickstarter backers should be credited collectively as part of the product's crowdfunding history; individual backer names should only be listed with permission or where the campaign explicitly publishes them.
 
