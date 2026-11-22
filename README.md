@@ -75,4 +75,4 @@ Search the repository for a hashtag to find related code. See [docs/code-map.md]
 
 ## History, Kickstarter & engineering credits
 
-The website includes a historical archive with three embedded source videos and a research note documenting the 2015 Kickstarter-era MOSAIC product, PowerStick, and engineering credit for John Zhu. See [docs/history-and-credits.md](docs/history-and-credits.md) for the source log, confidence notes, and open research questions. Historical claims are kept separate from confirmed PSTR2 hardware facts.
+The website includes a historical archive with three embedded source videos and a research note documenting the 2015 Kickstarter-era MOSAIC product, PowerStick's current official website, the Kickstarter community page and project update, and engineering credit for John Zhu. See [docs/history-and-credits.md](docs/history-and-credits.md) for the source log, confidence notes, and open research questions. Historical claims are kept separate from confirmed PSTR2 hardware facts.
