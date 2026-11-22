@@ -29,11 +29,14 @@ The next research step is to inspect the original app's network behavior and det
 ## Project map
 
 ```text
-index.html              Page structure, buttons, and content areas
-css/styles.css          Colors, spacing, cards, and responsive layout
-js/app.js               Navigation, demo files, and local video player
-docs/protocol-notes.md  Confirmed facts and unknown device behavior
-docs/code-map.md        Beginner guide to the code and comment labels
+index.html                         Page structure, buttons, and content areas
+css/styles.css                     Colors, spacing, cards, and responsive layout
+js/app.js                          Navigation, demo files, and local video player
+docs/protocol-notes.md             Confirmed facts and unknown device behavior
+docs/code-map.md                   Beginner guide to the code and comment labels
+docs/history-and-credits.md        Product history, company, people, and video sources
+docs/research/README.md            Research archive guide and evidence standards
+docs/research/kickstarter-and-timeline.md  Campaign record, chronology, and spec comparisons
 ```
 
 ## Beginner-friendly comment colors and hashtags
@@ -72,7 +75,8 @@ Search the repository for a hashtag to find related code. See [docs/code-map.md]
 5. Check the browser console if something stops working.
 6. Do not remove a safety note or mark a demo feature as live unless it has been tested with the actual Powerstick.
 
-
 ## History, Kickstarter & engineering credits
 
-The website includes a historical archive with three embedded source videos and a research note documenting the 2015 Kickstarter-era MOSAIC product, PowerStick's current official website, the Kickstarter community page and project update, and engineering credit for John Zhu. See [docs/history-and-credits.md](docs/history-and-credits.md) for the source log, confidence notes, and open research questions. Historical claims are kept separate from confirmed PSTR2 hardware facts.
+The website includes a historical archive with three embedded source videos and links to the original Kickstarter community and update. The research notes separate campaign-era advertising, later hands-on reporting, the physical PSTR2 label, current company information, and verified versus unverified engineering credits.
+
+Start with [docs/research/README.md](docs/research/README.md), then read [the Kickstarter record and product timeline](docs/research/kickstarter-and-timeline.md) and [history and credits](docs/history-and-credits.md). Funding totals, backer counts, video metadata, and MOSAIC-specific individual contributions remain open until confirmed by primary sources.
