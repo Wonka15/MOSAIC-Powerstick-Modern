@@ -1,70 +1,147 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- 🟦 #PAGE_METADATA — Browser settings and search preview information. -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#168fba">
   <meta name="description" content="A modern, friendly companion interface for the MOSAIC Powerstream PSTR2.">
   <title>Mosaic Powerstick Modern</title>
+
+  <!-- 🟦 #STYLESHEET — Keep visual design rules in the CSS file. -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="app-shell">
+    <!-- 🟦 #SITE_HEADER — Brand and connection-status area. -->
     <header class="topbar">
       <a class="brand" href="#" aria-label="Mosaic home">
-        <span class="brand-mark"><i></i><i></i><i></i><i></i></span>
-        <span><strong>Mosaic</strong><small>POWERSTICK MODERN</small></span>
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>
+          <strong>Mosaic</strong>
+          <small>POWERSTICK MODERN</small>
+        </span>
       </a>
-      <div class="connection-pill"><span class="status-dot"></span><span>Ready to connect</span></div>
-      <button class="icon-button" id="menuButton" aria-label="Open device details">☰</button>
+
+      <div class="connection-pill" role="status" aria-live="polite">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Ready to connect</span>
+      </div>
+
+      <button class="icon-button" id="menuButton" type="button" aria-label="Open device details">☰</button>
     </header>
+
     <main>
-      <section class="welcome">
+      <!-- 🟩 #WELCOME_PANEL — Friendly introduction and navigation shortcuts. -->
+      <section class="welcome" aria-labelledby="welcomeTitle">
         <div class="welcome-copy">
           <p class="eyebrow">YOUR PERSONAL MEDIA HUB</p>
-          <h1>Everything in<br><span>one little place.</span></h1>
+          <h1 id="welcomeTitle">Everything in<br><span>one little place.</span></h1>
           <p class="intro">Browse your Mosaic Powerstick, enjoy your media, and move between devices with ease.</p>
+
           <div class="welcome-actions">
-            <button class="primary-button" data-view="mosaic">Browse Mosaic <span>→</span></button>
-            <button class="soft-button" data-view="iphone">Browse this device</button>
+            <button class="primary-button" type="button" data-view="mosaic">Browse Mosaic <span>→</span></button>
+            <button class="soft-button" type="button" data-view="iphone">Browse this device</button>
           </div>
         </div>
-        <div class="connection-art" aria-label="Phone connected to Mosaic, with optional internet connection">
-          <div class="device-node"><span class="node-icon">▯</span><b>Your device</b><small>Phone or tablet</small></div>
-          <div class="link-line"><span></span></div>
-          <div class="device-node mosaic-node"><span class="mosaic-symbol">M</span><b>Mosaic</b><small>Powerstream</small></div>
-          <div class="link-line muted-line"><span></span></div>
-          <div class="internet-node"><span>◎</span><small>Internet<br>optional</small></div>
+
+        <!-- 🟨 #ILLUSTRATION — Decorative connection diagram; not a live status indicator. -->
+        <div class="connection-art" aria-label="Illustration of a phone connected to Mosaic, with optional internet connection">
+          <div class="device-node">
+            <span class="node-icon" aria-hidden="true">▯</span>
+            <b>Your device</b>
+            <small>Phone or tablet</small>
+          </div>
+          <div class="link-line" aria-hidden="true"><span></span></div>
+          <div class="device-node mosaic-node">
+            <span class="mosaic-symbol" aria-hidden="true">M</span>
+            <b>Mosaic</b>
+            <small>Powerstream</small>
+          </div>
+          <div class="link-line muted-line" aria-hidden="true"><span></span></div>
+          <div class="internet-node">
+            <span aria-hidden="true">◎</span>
+            <small>Internet<br>optional</small>
+          </div>
         </div>
       </section>
-      <section class="section-heading">
-        <div><p class="eyebrow">PICK UP WHERE YOU LEFT OFF</p><h2>Your library</h2></div>
-        <button class="text-button" data-view="mosaic">View all <span>→</span></button>
+
+      <!-- 🟦 #LIBRARY_SHORTCUTS — These buttons open the matching library views. -->
+      <section class="section-heading" aria-labelledby="libraryHeading">
+        <div>
+          <p class="eyebrow">PICK UP WHERE YOU LEFT OFF</p>
+          <h2 id="libraryHeading">Your library</h2>
+        </div>
+        <button class="text-button" type="button" data-view="mosaic">View all <span>→</span></button>
       </section>
-      <section class="library-grid">
-        <button class="library-card photos-card" data-view="photos"><span class="card-icon">▧</span><span class="card-label">Photos</span><small>Memories, all together</small><span class="card-arrow">↗</span></button>
-        <button class="library-card videos-card" data-view="videos"><span class="card-icon">▶</span><span class="card-label">Videos</span><small>Watch right here</small><span class="card-arrow">↗</span></button>
-        <button class="library-card music-card" data-view="music"><span class="card-icon">♫</span><span class="card-label">Music</span><small>Your favorite sounds</small><span class="card-arrow">↗</span></button>
-        <button class="library-card files-card" data-view="files"><span class="card-icon">▤</span><span class="card-label">Documents</span><small>Files and folders</small><span class="card-arrow">↗</span></button>
+
+      <section class="library-grid" aria-label="Media categories">
+        <button class="library-card photos-card" type="button" data-view="photos">
+          <span class="card-icon" aria-hidden="true">▧</span>
+          <span class="card-label">Photos</span>
+          <small>Memories, all together</small>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="library-card videos-card" type="button" data-view="videos">
+          <span class="card-icon" aria-hidden="true">▶</span>
+          <span class="card-label">Videos</span>
+          <small>Watch right here</small>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="library-card music-card" type="button" data-view="music">
+          <span class="card-icon" aria-hidden="true">♫</span>
+          <span class="card-label">Music</span>
+          <small>Your favorite sounds</small>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="library-card files-card" type="button" data-view="files">
+          <span class="card-icon" aria-hidden="true">▤</span>
+          <span class="card-label">Documents</span>
+          <small>Files and folders</small>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </button>
       </section>
-      <section class="device-panel">
-        <div class="device-copy"><div class="device-badge">M</div><div><p class="eyebrow">YOUR POWERSTICK</p><h2>Mosaic is ready when you are</h2><p>Connect to your Powerstick's Wi-Fi, then open its library.</p></div></div>
-        <button class="outline-button" data-view="device">Device details <span>→</span></button>
+
+      <!-- 🟩 #DEVICE_PROMO — Opens the verified hardware details currently known. -->
+      <section class="device-panel" aria-labelledby="devicePanelHeading">
+        <div class="device-copy">
+          <div class="device-badge" aria-hidden="true">M</div>
+          <div>
+            <p class="eyebrow">YOUR POWERSTICK</p>
+            <h2 id="devicePanelHeading">Mosaic is ready when you are</h2>
+            <p>Connect to your Powerstick's Wi-Fi, then open its library.</p>
+          </div>
+        </div>
+        <button class="outline-button" type="button" data-view="device">Device details <span>→</span></button>
       </section>
-      <section class="content-view hidden" id="contentView">
-        <div class="view-heading"><div><p class="eyebrow" id="viewEyebrow">YOUR LIBRARY</p><h2 id="viewTitle">Mosaic files</h2></div><button class="soft-button" id="homeButton">← Home</button></div>
-        <div id="viewContent"></div>
+
+      <!-- 🟦 #DYNAMIC_CONTENT — JavaScript fills this area when a section is selected. -->
+      <section class="content-view hidden" id="contentView" aria-labelledby="viewTitle">
+        <div class="view-heading">
+          <div>
+            <p class="eyebrow" id="viewEyebrow">YOUR LIBRARY</p>
+            <h2 id="viewTitle">Mosaic files</h2>
+          </div>
+          <button class="soft-button" id="homeButton" type="button">← Home</button>
+        </div>
+        <div id="viewContent" aria-live="polite"></div>
       </section>
     </main>
+
+    <!-- 🟦 #BOTTOM_NAVIGATION — Large, touch-friendly navigation for small screens. -->
     <nav class="bottom-nav" aria-label="Main navigation">
-      <button class="nav-item active" data-view="home"><span>⌂</span><small>Home</small></button>
-      <button class="nav-item" data-view="mosaic"><span>▱</span><small>Mosaic</small></button>
-      <button class="nav-item" data-view="iphone"><span>▯</span><small>This device</small></button>
-      <button class="nav-item" data-view="favorites"><span>☆</span><small>Favorites</small></button>
-      <button class="nav-item" data-view="recent"><span>◷</span><small>Recent</small></button>
+      <button class="nav-item active" type="button" data-view="home" aria-current="page"><span aria-hidden="true">⌂</span><small>Home</small></button>
+      <button class="nav-item" type="button" data-view="mosaic"><span aria-hidden="true">▱</span><small>Mosaic</small></button>
+      <button class="nav-item" type="button" data-view="iphone"><span aria-hidden="true">▯</span><small>This device</small></button>
+      <button class="nav-item" type="button" data-view="favorites"><span aria-hidden="true">☆</span><small>Favorites</small></button>
+      <button class="nav-item" type="button" data-view="recent"><span aria-hidden="true">◷</span><small>Recent</small></button>
     </nav>
   </div>
+
+  <!-- 🟨 #LOCAL_VIDEO_INPUT — The selected file stays in this browser; it is not uploaded. -->
   <input type="file" id="videoPicker" accept="video/mp4,video/*" hidden>
+
+  <!-- 🟦 #APP_SCRIPT — Load the behavior after the page elements exist. -->
   <script src="js/app.js"></script>
 </body>
 </html>
