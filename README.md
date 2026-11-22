@@ -37,6 +37,7 @@ docs/protocol-notes.md             Confirmed facts and unknown device behavior
 docs/code-map.md                   Beginner guide to the code and comment labels
 docs/history-and-credits.md        Product history, company, people, and video sources
 docs/research/README.md            Research archive guide and evidence standards
+docs/research/ios-app-analysis.md   Original iOS app investigation notebook
 docs/research/kickstarter-and-timeline.md  Campaign record, chronology, and spec comparisons
 ```
 
