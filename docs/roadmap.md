@@ -18,7 +18,7 @@ This roadmap turns the hardware research into a careful, testable modernization 
 | --- | --- | --- |
 | 0. Preserve the project | Keep the friendly web prototype and document what is and is not connected | In progress |
 | 1. Identify the hardware | Confirm SoC, RAM, flash, board revision and regulatory identifiers | In progress |
-| 2. Understand original firmware | Identify OS/firmware, web server, authentication and boot process without writing to device | Not started |
+| 2. Understand original firmware | Identify OS/firmware, web server, authentication and boot process without writing to device | Initial web-auth observation recorded; investigation ongoing |
 | 3. Map device communication | Document read-only file listing, directory navigation and video playback requests | Not started |
 | 4. Connect the modern interface | Replace demo-only data with a safe, tested device adapter | Not started |
 | 5. Improve media and storage features | Test streaming, multiple clients and compatible external storage | Not started |
@@ -60,7 +60,7 @@ Tasks:
 **Goal:** Identify what software runs on MOSAIC without risking the device.
 
 Tasks:
-- Document the normal boot behavior and the local web login prompt.
+- Document the normal boot behavior and the local web login prompt.\n- Initial observation: `http://192.168.10.1/` prompts for browser authentication; the user reports `admin` / `admin` dismisses the prompt, after which only the text `192.168.10.1` is displayed. This is not yet a confirmed file browser or dashboard; see [protocol notes](protocol-notes.md).
 - Determine whether the web interface is served by the device itself and identify the server/software only from reliable evidence.
 - Investigate firmware family, kernel/OS, bootloader and version where safely observable.
 - Determine RAM and flash size before evaluating firmware options.
