@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#168fba">
+  <meta name="description" content="A readable, organized archive of the MOSAIC Powerstick Powerstream: Kickstarter history, product timeline, company background, videos, and engineering credits.">
+  <title>MOSAIC Research Archive | Powerstick Modern</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .archive-page { max-width: 1120px; margin: 0 auto; padding-bottom: 48px; }
+    .archive-top { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px clamp(20px,5vw,56px); background:var(--blue); color:#fff; }
+    .archive-top a { color:#fff; font-weight:750; text-decoration:none; }
+    .archive-top .brand { font-size:18px; }
+    .archive-hero { padding:clamp(36px,7vw,76px) clamp(22px,6vw,68px); background:linear-gradient(115deg,#f1fbf8,#fff8f2); }
+    .archive-hero h1 { max-width:760px; margin:0; font-size:clamp(36px,6vw,62px); line-height:1.04; letter-spacing:-2px; }
+    .archive-hero h1 span { color:var(--blue); }
+    .archive-hero p:not(.eyebrow) { max-width:700px; color:var(--muted); line-height:1.75; }
+    .archive-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .archive-content { padding:0 clamp(20px,6vw,68px); }
+    .archive-section { margin-top:34px; }
+    .archive-section h2 { margin:0 0 14px; font-size:clamp(22px,3vw,29px); }
+    .archive-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; }
+    .archive-card { padding:22px; border:1px solid var(--line); border-radius:17px; background:#fff; }
+    .archive-card h3 { margin:7px 0 10px; font-size:18px; }
+    .archive-card p,.archive-card li { color:var(--muted); font-size:14px; line-height:1.7; }
+    .archive-card a { color:#087da4; font-weight:750; text-decoration:none; }
+    .archive-card a:hover { text-decoration:underline; }
+    .archive-card ul { padding-left:20px; }
+    .archive-kicker { color:var(--blue); font-size:11px; font-weight:850; letter-spacing:1.5px; }
+    .archive-videos { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .archive-video { overflow:hidden; border:1px solid var(--line); border-radius:15px; background:#fff; }
+    .archive-video iframe { display:block; width:100%; aspect-ratio:16/9; border:0; background:#172b36; }
+    .archive-video p { margin:0; padding:12px; color:var(--muted); font-size:13px; }
+    .archive-footer { margin-top:40px; padding:22px clamp(20px,6vw,68px); border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+    @media(max-width:700px) { .archive-grid,.archive-videos { grid-template-columns:1fr; } .archive-top { align-items:flex-start; flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <div class="archive-page">
+    <header class="archive-top">
+      <a class="brand" href="index.html">MOSAIC · POWERSTICK MODERN</a>
+      <a href="index.html">← Open the companion app demo</a>
+    </header>
+    <main>
+      <section class="archive-hero">
+        <p class="eyebrow">A PRESERVED PRODUCT STORY · 2015–PRESENT</p>
+        <h1>The story behind <span>MOSAIC Powerstream.</span></h1>
+        <p>A readable research archive for the Powerstick PSTR2: its Kickstarter beginnings, the product as it was presented, the company behind it, original video sources, and the engineering history we can responsibly document.</p>
+        <div class="archive-actions">
+          <a class="primary-button" href="docs/research/kickstarter-and-timeline.md">Read the Kickstarter timeline →</a>
+          <a class="soft-button" href="docs/history-and-credits.md">History &amp; credits</a>
+          <a class="soft-button" href="index.html">Open app prototype</a>
+        </div>
+      </section>
+      <div class="archive-content">
+        <section class="archive-section">
+          <h2>Explore the archive</h2>
+          <div class="archive-grid">
+            <article class="archive-card">
+              <span class="archive-kicker">01 · CAMPAIGN &amp; TIMELINE</span>
+              <h3>Kickstarter beginnings</h3>
+              <p>MOSAIC was reported on Kickstarter in July 2015. The timeline separates launch-era advertising from later hands-on reporting and the facts recorded from a physical PSTR2 unit.</p>
+              <ul>
+                <li><a href="https://www.kickstarter.com/projects/1753158/mosaic-make-your-phone-amazing-in-the-ways-its-not/">Original Kickstarter campaign</a></li>
+                <li><a href="https://www.kickstarter.com/projects/1753158/mosaic-make-your-phone-amazing-in-the-ways-its-not/community">Backer community</a></li>
+                <li><a href="https://www.kickstarter.com/projects/1753158/mosaic-make-your-phone-amazing-in-the-ways-its-not/posts/1326601">Project update #1326601</a></li>
+              </ul>
+              <a href="docs/research/kickstarter-and-timeline.md">Open the full timeline →</a>
+            </article>
+            <article class="archive-card">
+              <span class="archive-kicker">02 · COMPANY</span>
+              <h3>PowerStick then and now</h3>
+              <p>Research notes connect the original product to PowerStick while distinguishing the company's current public business from any unverified claim of ongoing PSTR2 support.</p>
+              <p><a href="https://powerstick.com/">PowerStick official website</a> · <a href="https://powerstick.com/our-team">Company team page</a></p>
+            </article>
+            <article class="archive-card">
+              <span class="archive-kicker">03 · ENGINEERING CREDIT</span>
+              <h3>John Zhu</h3>
+              <p>PowerStick identifies John Zhu as Director of Engineering, and public FCC records identify him as an engineering contact. His precise contribution to MOSAIC hardware, firmware, Wi-Fi, or app development remains to be confirmed.</p>
+              <a href="docs/history-and-credits.md">Read the evidence and credit notes →</a>
+            </article>
+            <article class="archive-card">
+              <span class="archive-kicker">04 · RESEARCH METHOD</span>
+              <h3>Evidence, not guesses</h3>
+              <p>Campaign promises, contemporary reporting, physical-device observations, and unknowns are kept separate. Funding totals and backer counts remain unverified until the campaign record can be checked directly.</p>
+              <a href="docs/research/README.md">Research guide and evidence standards →</a>
+            </article>
+          </div>
+        </section>
+        <section class="archive-section">
+          <h2>Original video sources</h2>
+          <p style="color:var(--muted);line-height:1.7">These are the three videos supplied for the project archive. Titles and creator metadata will be added after checking the original uploads.</p>
+          <div class="archive-videos">
+            <article class="archive-video"><iframe src="https://www.youtube-nocookie.com/embed/ROXPfZqRods" title="MOSAIC source video 1" loading="lazy" allowfullscreen></iframe><p>Source video 1 · <a href="https://youtu.be/ROXPfZqRods">Open on YouTube</a></p></article>
+            <article class="archive-video"><iframe src="https://www.youtube-nocookie.com/embed/Wus8L8yRq3M" title="MOSAIC source video 2" loading="lazy" allowfullscreen></iframe><p>Source video 2 · <a href="https://youtu.be/Wus8L8yRq3M">Open on YouTube</a></p></article>
+            <article class="archive-video"><iframe src="https://www.youtube-nocookie.com/embed/X1hmcPQcjc0" title="MOSAIC source video 3" loading="lazy" allowfullscreen></iframe><p>Source video 3 · <a href="https://youtu.be/X1hmcPQcjc0">Open on YouTube</a></p></article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="archive-footer">MOSAIC Powerstick Modern · Independent preservation and research project. This archive is not an official PowerStick support site. <a href="index.html">Return to the companion app demo</a>.</footer>
+  </div>
+</body>
+</html>
