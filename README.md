@@ -4,22 +4,50 @@ A friendly, responsive browser interface inspired by the original MOSAIC Powerst
 
 ## Project direction
 
-Preserve the original app's approachable character:
-- bright blue navigation/header
-- soft mint, coral, and warm yellow accents
-- colorful media shortcuts
-- simple Mosaic / this-device navigation
+Keep the original app's approachable character:
+- Bright blue navigation/header
+- Soft mint, coral, and warm yellow accents
+- Colorful media shortcuts
+- Simple Mosaic / this-device navigation
 
 Modernize it with responsive layouts, accessible controls, larger touch targets, and a cleaner media library.
 
-## Website prototype
+## What currently works
 
-The repository includes a static website:
-- responsive home screen and bottom navigation
-- sample library and folder list (demonstration data only)
-- device details transcribed from the PSTR2 label
-- local video preview: choose a video file on the current device and play it in the browser
-- no external libraries or build step required
+- Responsive home screen and bottom navigation
+- Sample library and folder list (**demonstration data only**)
+- Device details transcribed from the PSTR2 label
+- Local video preview: choose a video file on the current device and play it in the browser
+- No external libraries or build step required
+
+## What is not connected yet
+
+This is a front-end prototype. It does **not** yet communicate with the Powerstick, list its real files, upload files, or stream videos from it.
+
+The next research step is to inspect the original app's network behavior and determine what local endpoints the PSTR2 exposes. Browser restrictions such as CORS, HTTP authentication, and mixed-content rules may require a small local companion service rather than GitHub Pages alone.
+
+## Project map
+
+```text
+index.html              Page structure, buttons, and content areas
+css/styles.css          Colors, spacing, cards, and responsive layout
+js/app.js               Navigation, demo files, and local video player
+docs/protocol-notes.md  Confirmed facts and unknown device behavior
+docs/code-map.md        Beginner guide to the code and comment labels
+```
+
+## Beginner-friendly comment colors and hashtags
+
+The comments use colored emoji labels and searchable hashtags. These labels are documentation markers; they do not change how the browser runs the code.
+
+| Label | Meaning |
+| --- | --- |
+| 🟦 `#PAGE_STRUCTURE` / `#NAVIGATION` | Main page layout and movement between screens |
+| 🟩 `#COMPONENT` / `#FILE_LIST` | Visible interface pieces and how they are built |
+| 🟨 `#DEMO` / `#FUTURE_DEV` | Example data, temporary behavior, and future work |
+| 🟥 `#SAFETY` / `#DEVICE_API` | Important limitations and areas needing extra care |
+
+Search the repository for a hashtag to find related code. See [docs/code-map.md](docs/code-map.md) for a gentle walkthrough.
 
 ## Publish with GitHub Pages
 
@@ -29,25 +57,17 @@ The repository includes a static website:
 4. Select branch **main** and folder **/(root)**, then save.
 5. Wait for GitHub Pages to finish deploying. The Pages panel will show the live website address.
 
-## Important: live device access is not implemented yet
-
-This is a front-end prototype. It does **not** yet communicate with the Powerstick, list its real files, upload files, or stream videos from it. The next research step is to inspect the original app's network behavior and determine what local endpoints the PSTR2 exposes. Browser restrictions such as CORS, HTTP authentication, and mixed-content rules may require a small local companion service rather than GitHub Pages alone.
-
-## Project structure
-
-```text
-index.html
-css/styles.css
-js/app.js
-docs/protocol-notes.md
-```
-
 ## Safety and privacy
 
 - Do not commit the Powerstick Wi-Fi password, admin credentials, private media, or personal network details.
 - The device label photo contains a Wi-Fi password. It has intentionally **not** been copied into this project.
 - Do not attempt firmware changes or open the enclosure while the battery is connected. Start with read-only network research.
 
-## Beginner-friendly code notes
+## How to make a safe change
 
-The JavaScript is intentionally small and commented. `sampleFiles` is only mock content. Replace it with real device data only after the Powerstick protocol is verified.
+1. Open the file that matches the part you want to change.
+2. Read the nearby comment and hashtag first.
+3. Make one small change at a time.
+4. Preview the website on a phone-sized screen and a desktop-sized screen.
+5. Check the browser console if something stops working.
+6. Do not remove a safety note or mark a demo feature as live unless it has been tested with the actual Powerstick.
