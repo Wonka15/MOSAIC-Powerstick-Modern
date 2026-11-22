@@ -60,7 +60,7 @@ Tasks:
 **Goal:** Identify what software runs on MOSAIC without risking the device.
 
 Tasks:
-- Document the normal boot behavior and the local web login prompt.\n- Initial observation: `http://192.168.10.1/` prompts for browser authentication; the user reports `admin` / `admin` dismisses the prompt, after which only the text `192.168.10.1` is displayed. This is not yet a confirmed file browser or dashboard; see [protocol notes](protocol-notes.md).
+- Document the normal boot behavior and the local web login prompt.\n- Initial observation: `http://192.168.10.1/` prompts for browser authentication; the user reports `admin` / `admin` dismisses the prompt. A later screenshot confirms a branded MOSAIC by Powerstick landing page with **Connect to Internet** and **MOSAIC Security** tiles. Their functions remain untested; see [protocol notes](protocol-notes.md).
 - Determine whether the web interface is served by the device itself and identify the server/software only from reliable evidence.
 - Investigate firmware family, kernel/OS, bootloader and version where safely observable.
 - Determine RAM and flash size before evaluating firmware options.
