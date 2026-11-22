@@ -4,6 +4,8 @@ A friendly, responsive browser interface inspired by the original MOSAIC Powerst
 
 ## Project direction
 
+See the [MOSAIC modernization roadmap](docs/roadmap.md) for the phased plan, safety rules, current status, and next hardware investigation milestone.
+
 Keep the original app's approachable character:
 - Bright blue navigation/header
 - Soft mint, coral, and warm yellow accents
@@ -38,6 +40,8 @@ research.html                      Standalone, mobile-friendly history archive
 css/styles.css                     Colors, spacing, cards, and responsive layout
 js/app.js                          Navigation, demo files, and local video player
 docs/protocol-notes.md             Confirmed facts and unknown device behavior
+docs/roadmap.md                    Phased hardware and software modernization plan
+docs/hardware-and-company-history.md  RT5350F board evidence, Power7 comparison, Ottawa history and FCC context
 docs/code-map.md                   Beginner guide to the code and comment labels
 docs/history-and-credits.md        Product history, company, people, and video sources
 docs/research/README.md            Research archive guide and evidence standards
