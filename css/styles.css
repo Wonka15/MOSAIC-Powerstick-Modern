@@ -848,3 +848,50 @@ a.soft-button {
     text-overflow: ellipsis;
   }
 }
+
+
+/* 🟦 #WIFI_LAUNCHER — Explain the PSTR2 Wi-Fi entry flow without claiming a live connection. */
+.wifi-launcher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 25px clamp(20px, 6vw, 68px) 0;
+  padding: 24px;
+  border: 1px solid #d9eaf0;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #f0f9fc, #f2faf6);
+}
+.wifi-launcher-copy {
+  max-width: 690px;
+}
+.wifi-launcher h2 {
+  margin: 0;
+  font-size: clamp(21px, 3vw, 27px);
+  letter-spacing: -0.6px;
+}
+.wifi-launcher-copy > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.wifi-launcher-note {
+  margin-bottom: 0;
+  padding-left: 12px;
+  border-left: 3px solid #9bcfca;
+}
+.gateway-button {
+  flex: 0 0 auto;
+  text-decoration: none;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .wifi-launcher {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .gateway-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
