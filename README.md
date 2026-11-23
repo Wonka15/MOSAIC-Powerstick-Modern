@@ -10,14 +10,14 @@ A mobile-friendly companion and preservation project for the MOSAIC Powerstream 
 ## What the website currently does
 
 - **MOSAIC Gateway:** Opens the device's known local gateway at `192.168.10.1`, where the original device interface provides network and Wi-Fi security settings. Your phone or tablet must first be connected to the MOSAIC Wi-Fi network.
-- **MOSAIC Storage — In Development:** Explains the known storage features and the ongoing investigation into how the original app accesses files.
+- **MOSAIC Storage — Working:** VLC for iPad 3.7.4 successfully connects to the PowerStick over SMB, browses `Public → SDA1`, and plays videos directly from device storage.
 - **Research archive:** Preserves product history, original videos, company background, engineering research, and project notes.
 
-## Storage research: VLC playback verified, browser access in development
+## MOSAIC storage: working with VLC
 
 A real-device test confirmed that **VLC for iPad 3.7.4** can connect to the PowerStick over SMB and play a video directly from its storage. The tested sequence is: connect the iPad to MOSAIC Wi-Fi → open VLC → add a server → enter `192.168.10.1` → choose SMB → enter username `admin` and the device password → connect → open `Public` → open `SDA1`.
 
-The website itself does **not** yet browse, list, upload, download, or stream files from MOSAIC. GitHub Pages cannot directly open SMB connections or raw TCP sockets. A browser-compatible method still needs to be investigated. See the [tested VLC instructions and network research](research.html#vlc-storage) and the [technical network-discovery log](docs/research/network-discovery.md). All device exploration remains read-only.
+**Storage access is no longer a development item: it is working and has been tested on the physical PSTR2.** VLC provides the confirmed way to browse and play media. A separate, optional goal is to investigate whether the website itself can provide a browser-based interface; that is not a blocker for using the storage. See the [tested VLC instructions and network research](research.html#vlc-storage) and the [technical network-discovery log](docs/research/network-discovery.md). All device exploration remains read-only.
 
 ## Project direction
 
