@@ -118,3 +118,8 @@ This is an **interface-preservation and black-box research** project:
 7. Test read-only endpoints before attempting any write operation.
 
 Never publish the Wi-Fi password, private file names, session tokens, authenticated request captures, or media URLs.
+
+
+## Additional local web-interface source review
+
+The user supplied the homepage HTML, `/lang/b28n.js`, and `/quick/common.css` for review. The observations, interpretation limits, and next read-only steps are documented in [MOSAIC local web interface investigation](research/router-web-interface.md). In particular, the Wi-Fi scan/connect page is not a battery-status page, and no battery telemetry has been identified in the supplied source material.
