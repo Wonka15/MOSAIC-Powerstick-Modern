@@ -34,6 +34,11 @@
     .archive-video iframe { display:block; width:100%; aspect-ratio:16/9; border:0; background:#172b36; }
     .archive-video p { margin:0; padding:12px; color:var(--muted); font-size:13px; }
     .archive-note { margin-top:16px; padding:16px 18px; border-left:3px solid var(--blue); background:#f5fafc; color:var(--muted); font-size:14px; line-height:1.7; }
+    .steps-list { counter-reset:setup; display:grid; gap:12px; padding:0; margin:16px 0; list-style:none; }
+    .steps-list li { counter-increment:setup; display:grid; grid-template-columns:34px 1fr; gap:12px; align-items:start; padding:14px; border:1px solid var(--line); border-radius:13px; background:#fff; color:var(--muted); line-height:1.65; }
+    .steps-list li::before { content:counter(setup); display:grid; place-items:center; width:30px; height:30px; border-radius:50%; background:#e8f5f9; color:#087da4; font-weight:850; }
+    .setup-code { display:inline-block; padding:3px 8px; border-radius:6px; background:#f1f5f7; color:#183846; font-family:ui-monospace,monospace; font-weight:750; }
+    .success-strip { margin-top:16px; padding:16px 18px; border:1px solid #b9dfcf; border-radius:14px; background:#f1faf5; color:#245c42; line-height:1.7; }
     .archive-index { display:flex; flex-wrap:wrap; gap:9px; margin-top:20px; }
     .archive-index a { padding:8px 12px; border:1px solid var(--line); border-radius:999px; color:#087da4; font-size:13px; font-weight:750; text-decoration:none; background:#fff; }
     .archive-footer { margin-top:40px; padding:22px clamp(20px,6vw,68px); border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
@@ -176,8 +181,50 @@
           </div>
         </section>
 
+
+        <section class="archive-section" id="vlc-storage">
+          <h2>06 · Connect to MOSAIC storage with VLC</h2>
+          <p class="archive-section-intro">A real-device test confirmed that VLC for iPad (version 3.7.4) can connect to the PSTR2 over its local Wi-Fi network, browse the storage folders, and play a video directly from the PowerStick.</p>
+          <article class="archive-card">
+            <span class="archive-kicker">TESTED WORKFLOW · VLC FOR IPAD 3.7.4</span>
+            <h3>Step-by-step connection instructions</h3>
+            <ol class="steps-list">
+              <li><div><strong>Join the MOSAIC Wi-Fi network.</strong><br>On your iPad, open Settings → Wi-Fi and connect to the wireless network broadcast by your MOSAIC PowerStick. Stay connected to that network while using VLC.</div></li>
+              <li><div><strong>Open VLC.</strong><br>Launch VLC for iPad. This test was completed with version <span class="setup-code">3.7.4</span>.</div></li>
+              <li><div><strong>Add a network server.</strong><br>In VLC, open the Network area and choose the option to add or connect to a server (the exact label can vary by VLC version).</div></li>
+              <li><div><strong>Enter the MOSAIC server address.</strong><br>Use <span class="setup-code">192.168.10.1</span> as the server IP address and select SMB if VLC asks for the network protocol.</div></li>
+              <li><div><strong>Enter the sign-in details.</strong><br>Use <span class="setup-code">admin</span> as the username for the tested setup, then enter the password configured on your own PowerStick. The default used during the owner's test is intentionally not reproduced in this public guide.</div></li>
+              <li><div><strong>Connect and open the folders.</strong><br>After the SMB connection succeeds, open <span class="setup-code">Public</span>, then <span class="setup-code">SDA1</span>. This takes you into the MOSAIC storage volume.</div></li>
+              <li><div><strong>Browse and play media.</strong><br>Choose a media file in VLC. The owner successfully played a video directly from the PowerStick during testing.</div></li>
+            </ol>
+            <div class="success-strip"><strong>Verified result:</strong> VLC 3.7.4 on iPad connected to <span class="setup-code">192.168.10.1</span> over SMB, navigated through <span class="setup-code">Public → SDA1</span>, and played a video from the device. This confirms practical media access through VLC; it does not yet prove that Safari or a GitHub Pages website can connect to SMB.</div>
+          </article>
+          <div class="archive-grid" style="margin-top:15px">
+            <article class="archive-card">
+              <span class="archive-kicker">KNOWN NETWORK DETAILS</span>
+              <h3>What the test used</h3>
+              <ul>
+                <li>Client: VLC for iPad, version 3.7.4</li>
+                <li>Server IP: <span class="setup-code">192.168.10.1</span></li>
+                <li>Protocol: SMB</li>
+                <li>Username: <span class="setup-code">admin</span></li>
+                <li>Folder path after connecting: <span class="setup-code">Public → SDA1</span></li>
+                <li>Observed outcome: browsed files and played a video</li>
+              </ul>
+            </article>
+            <article class="archive-card">
+              <span class="archive-kicker">SAFETY & LIMITATIONS</span>
+              <h3>Read-only research only</h3>
+              <p>Do not delete, rename, move, overwrite, upload, or edit files on the PowerStick. Do not publish device passwords or expose its local administration services to the public internet.</p>
+              <p>Apple Files did not connect successfully in the owner's test, but the exact error and negotiated SMB dialect have not been recorded. SMB1 remains an unverified hypothesis.</p>
+              <p>A static browser site on GitHub Pages cannot directly open SMB connections or raw TCP sockets. Browser-based storage access still needs a compatible HTTP interface or a separate local bridge.</p>
+              <a href="docs/research/network-discovery.md">Read the technical network-discovery log →</a>
+            </article>
+          </div>
+        </section>
+
         <section class="archive-section" id="media">
-          <h2>06 · Original video sources</h2>
+          <h2>07 · Original video sources</h2>
           <p class="archive-section-intro">These three supplied YouTube references are preserved as primary media leads. Their titles, upload dates, channel names, and exact relevance still need to be checked against the original uploads.</p>
           <div class="archive-videos">
             <article class="archive-video"><iframe src="https://www.youtube-nocookie.com/embed/ROXPfZqRods" title="MOSAIC source video 1" loading="lazy" allowfullscreen></iframe><p>Source video 1 · <a href="https://youtu.be/ROXPfZqRods" target="_blank" rel="noopener noreferrer">Open on YouTube ↗</a></p></article>
