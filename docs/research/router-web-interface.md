@@ -50,3 +50,18 @@ A voltage reading alone would not automatically provide an accurate percentage. 
 ## Evidence boundary
 
 This document is based on user-supplied page source, CSS, and observed responses from the local device. The repository does not contain a direct capture of the device's firmware, a complete endpoint inventory, or proof of battery telemetry support.
+
+
+## Embedded platform and Ralink software-lineage clue
+
+The board investigation documented in [hardware and company-history](../hardware-and-company-history.md) identifies the large networking SoC by its visible marking as **Ralink RT5350F** (subject to the photo/marking qualification recorded there). The supplied local web-interface source provides a separate, consistent clue:
+
+- The homepage title is **Wireless Router** and loads `/quick/common.css` and `/lang/b28n.js`.
+- The supplied `b28n.js` is a modified Butterfat/Butterlate-style localization helper.
+- Its attribution includes `winfred_lu@ralinktech.com.tw`.
+- The script reads a `language` cookie, defaults to English, and loads language message XML. This is localization behavior, not battery or Wi-Fi telemetry.
+
+Taken together, the physical SoC marking and the Ralink-attributed localization code support describing MOSAIC as a **small embedded networking computer using a Ralink RT5350F SoC and a router-style administration interface**.
+
+**Keep the claims separate:** the chip marking identifies the SoC; the email in the script suggests software lineage. Neither item alone proves the exact firmware build or operating system. Embedded Linux is a plausible research lead for this class of device, but MOSAIC's OS/version remains unconfirmed. The Butterlate script does not establish battery monitoring or prove that battery data is exposed by the web interface.
+
