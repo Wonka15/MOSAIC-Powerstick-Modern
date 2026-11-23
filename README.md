@@ -17,7 +17,7 @@ A mobile-friendly companion and preservation project for the MOSAIC Powerstream 
 
 A real-device test confirmed that **VLC for iPad 3.7.4** can connect to the PowerStick over SMB and play a video directly from its storage. The tested sequence is: connect the iPad to MOSAIC Wi-Fi → open VLC → add a server → enter `192.168.10.1` → choose SMB → enter username `admin` and the device password → connect → open `Public` → open `SDA1`.
 
-**Storage access is no longer a development item: it is working and has been tested on the physical PSTR2.** VLC provides the confirmed way to browse and play media. A separate, optional goal is to investigate whether the website itself can provide a browser-based interface; that is not a blocker for using the storage. See the [tested VLC instructions and network research](research.html#vlc-storage) and the [technical network-discovery log](docs/research/network-discovery.md). All device exploration remains read-only.
+**Storage access is no longer a development item: it is working and has been tested on the physical PSTR2.** VLC provides the confirmed way to browse and play media. A separate, optional goal is to investigate whether the website itself can provide a browser-based interface; that is not a blocker for using the storage. See the [tested VLC instructions and network research](research.html#vlc-storage) the [technical network-discovery log](docs/research/network-discovery.md), and the [local web-interface investigation](docs/research/router-web-interface.md). All device exploration remains read-only.
 
 ## Project direction
 
@@ -33,6 +33,7 @@ research.html                      Standalone product history and research archi
 css/styles.css                     Colors, spacing, components, and responsive layout
 js/app.js                          Gateway address-copy helper only
 docs/protocol-notes.md             Confirmed facts, observed web UI, and unknown device behavior
+docs/research/router-web-interface.md  Source review of the local router-style interface
 docs/interface-preservation.md     External-only research plan and UI recreation strategy
 docs/roadmap.md                    Phased hardware and software modernization plan
 docs/hardware-and-company-history.md  Hardware and company-history research
