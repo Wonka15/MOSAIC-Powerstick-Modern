@@ -16,6 +16,27 @@ The RT5350 datasheet describes a 360 MHz MIPS24KEc CPU, integrated 2.4 GHz 802.1
 
 Reference: [Ralink RT5350 preliminary datasheet (2010)](https://cdn.sparkfun.com/datasheets/Wireless/WiFi/RT5350.pdf).
 
+
+## 1A. Battery pack and board connection — identification still incomplete
+
+The external product label identifies the MOSAIC battery as **4,500 mAh**. The earlier board-photo review did not preserve a sufficiently clear, reusable close-up or a written pin-by-pin description of the battery connection.
+
+**Confirmed:**
+- The product label states 4,500 mAh.
+- The device is a rechargeable, battery-powered product.
+
+**Not yet confirmed:**
+- Battery chemistry and nominal/maximum voltage.
+- Whether the pack uses one cell or multiple cells.
+- Cell format, dimensions and physical arrangement.
+- Whether the pack includes a protection PCB, temperature sensor or other monitoring lead.
+- Whether the pack connects to the main PCB using a plug, soldered wires, welded tabs or another arrangement.
+- Exact PCB pad names, polarity and charging-controller topology.
+
+Do not describe the battery as directly soldered to the board until a clear photograph establishes the pack-to-board connection. Even if wires are soldered to PCB pads, that is different from soldering directly to a bare cell.
+
+**Repair boundary:** A qualified battery/electronics technician should identify the original pack and its protection/charging arrangement before any replacement is sourced. Never solder directly to a bare lithium-ion cell. Do not open or modify the unit as part of the current external-only research.
+
 ## 2. A close contemporary comparison: Power7 Wi-Fi storage
 
 A documented product from the same era provides a useful comparison:
