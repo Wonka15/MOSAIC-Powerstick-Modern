@@ -4,7 +4,7 @@ A friendly, responsive browser interface inspired by the original MOSAIC Powerst
 
 ## Project direction
 
-See the [MOSAIC modernization roadmap](docs/roadmap.md) for the phased plan, safety rules, current status, and next hardware investigation milestone.
+See the [MOSAIC modernization roadmap](docs/roadmap.md) for the phased plan, safety rules, current status, and next milestone. The current research is focused on preserving the original browser interface using external access only; internal firmware access is not required.
 
 Keep the original app's approachable character:
 - Bright blue navigation/header
@@ -39,7 +39,8 @@ index.html                         Companion app prototype and home page
 research.html                      Standalone, mobile-friendly history archive
 css/styles.css                     Colors, spacing, cards, and responsive layout
 js/app.js                          Navigation, demo files, and local video player
-docs/protocol-notes.md             Confirmed facts and unknown device behavior
+docs/protocol-notes.md             Confirmed facts, observed web UI, and unknown device behavior
+docs/interface-preservation.md     External-only research plan and UI recreation strategy
 docs/roadmap.md                    Phased hardware and software modernization plan
 docs/hardware-and-company-history.md  RT5350F board evidence, Power7 comparison, Ottawa history and FCC context
 docs/code-map.md                   Beginner guide to the code and comment labels
@@ -73,8 +74,9 @@ Search the repository for a hashtag to find related code. See [docs/code-map.md]
 
 ## Safety and privacy
 
-- Do not commit the Powerstick Wi-Fi password, admin credentials, private media, or personal network details.
-- The device label photo contains a Wi-Fi password. It has intentionally **not** been copied into this project.
+- Never commit the Powerstick Wi-Fi password, private media, session tokens, or personal network details.
+- The observed local browser login (`admin` / `admin`) is documented as a device-specific research finding in `docs/protocol-notes.md`; do not reuse it elsewhere or expose the administration interface to the public internet.
+- A user screenshot exposed the device's Wi-Fi password. It has intentionally **not** been copied into this project.
 - Do not attempt firmware changes or open the enclosure while the battery is connected. Start with read-only network research.
 
 ## How to make a safe change
