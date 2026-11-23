@@ -18,7 +18,7 @@ This roadmap turns the hardware research into a careful, testable modernization 
 | --- | --- | --- |
 | 0. Preserve the project | Keep the friendly web prototype and document what is and is not connected | In progress |
 | 1. Identify the hardware | Confirm SoC, RAM, flash, board revision and regulatory identifiers | In progress |
-| 2. Understand original firmware | Identify OS/firmware, web server, authentication and boot process without writing to device | Initial web-auth observation recorded; investigation ongoing |
+| 2. Understand original firmware | Identify OS/firmware, web server, authentication and boot process without writing to device | External web UI confirmed; interface preservation underway |
 | 3. Map device communication | Document read-only file listing, directory navigation and video playback requests | Not started |
 | 4. Connect the modern interface | Replace demo-only data with a safe, tested device adapter | Not started |
 | 5. Improve media and storage features | Test streaming, multiple clients and compatible external storage | Not started |
@@ -57,10 +57,14 @@ Tasks:
 
 ## Phase 2 — Understand the original firmware safely
 
-**Goal:** Identify what software runs on MOSAIC without risking the device.
+**Goal:** Preserve and understand the software behavior visible through MOSAIC's external interface, without requiring internal access or risking the device.
 
 Tasks:
-- Document the normal boot behavior and the local web login prompt.\n- Initial observation: `http://192.168.10.1/` prompts for browser authentication; the user reports `admin` / `admin` dismisses the prompt. Screenshots confirm the branded landing page, a **Mosaic AP Feature** Wi-Fi scan/configuration page, and a **MOSAIC Security** page with SSID, WPA-PSK, encryption and Wi-Fi password controls. No settings have been changed; exact AP/client behavior remains to be verified. See [protocol notes](protocol-notes.md).
+- Preserve the observed browser login and external MOSAIC interface. The user reports `admin` / `admin` dismisses the browser authentication prompt.
+- Document the branded landing page, **Mosaic AP Feature** Wi-Fi scan/configuration page, and **MOSAIC Security** page with SSID, WPA-PSK, encryption and Wi-Fi password controls.
+- Keep the investigation within the exposed browser interface; internal firmware, shell, serial, source code and storage access are not currently available.
+- Recreate the observed screens in the companion website as a clearly labeled, non-connected simulation before attempting any live integration.
+- See [protocol notes](protocol-notes.md) and [interface preservation plan](interface-preservation.md).
 - Determine whether the web interface is served by the device itself and identify the server/software only from reliable evidence.
 - Investigate firmware family, kernel/OS, bootloader and version where safely observable.
 - Determine RAM and flash size before evaluating firmware options.
@@ -72,11 +76,11 @@ Safety rules:
 - Do not write to unknown endpoints or change network settings without a recovery plan.
 - Do not flash generic RT5350 or OpenWrt images. Similar SoC does not mean compatible board layout or firmware.
 
-**Completion criteria:** A documented firmware/software profile and a safe backup/recovery plan, or a clear explanation of what cannot be determined without invasive work.
+**Completion criteria:** A documented external-interface map, a clear list of unknown internal details, and a safe boundary for further research. Internal firmware identification is optional and currently out of scope.
 
 ## Phase 3 — Map the original device protocol
 
-**Goal:** Learn how the original app browses and plays content.
+**Goal:** Learn only what can be established through the external interface and normal user-visible device behavior. Do not assume access to internal files or firmware.
 
 Tasks:
 - Record the exact user-visible steps to connect, authenticate, browse a folder and play an MP4.
@@ -139,7 +143,8 @@ OpenWrt is a research lead, not a current project dependency. Some RT5350 device
 ## Research references
 
 - [Hardware and company-history investigation](hardware-and-company-history.md) — board photo identification, RT5350F, Power7 comparison, Ottawa reporting and FCC context.
-- [PSTR2 protocol notes](protocol-notes.md) — label facts, reported app behavior and protocol unknowns.
+- [PSTR2 protocol notes](protocol-notes.md) — label facts, observed web UI, access boundaries and protocol unknowns.
+- [Interface preservation plan](interface-preservation.md) — external-only research method and companion-site recreation plan.
 - [Beginner code map](code-map.md) — where to find and safely edit the web prototype.
 - [Power7 FCC record QT72015ATO0001](https://fccid.io/QT72015ATO0001) — contemporary RT5350 Wi-Fi storage comparison; not proof of MOSAIC's supplier.
 - [Ralink RT5350 datasheet](https://cdn.sparkfun.com/datasheets/Wireless/WiFi/RT5350.pdf) — SoC capabilities.
