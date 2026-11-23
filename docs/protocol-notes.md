@@ -18,7 +18,7 @@
 - Subnet mask shown: **255.255.255.0**.
 - The phone remained connected to the MOSAIC Wi-Fi while testing the gateway.
 - Browsing to `http://192.168.10.1/` produced a browser username/password authentication prompt.
-- The user reports that **username `admin` and password `admin`** dismissed the prompt.
+- The user successfully authenticated to this unit's local web interface using the default administrator credential pair. The exact password is intentionally omitted from this public repository.
 - The user later supplied a screenshot of the authenticated page at **192.168.10.1**. It shows a branded **MOSAIC by Powerstick** landing page with two large selectable tiles:
   - **Connect to Internet** (orange tile with a globe icon)
   - **MOSAIC Security** (teal tile with a padlock icon)
@@ -30,7 +30,7 @@
 The login prompt and its dismissal are useful evidence that a service at the local gateway is requesting HTTP-style browser authentication. The bare IP text displayed afterward does **not** establish that file browsing, streaming, or a complete web administration interface is available at the root path. The exact server software, authentication realm, and other endpoints remain unknown.
 
 ### Credential safety
-The user observed `admin` / `admin` working to dismiss the local prompt on this unit. Treat this as a weak/default local-device credential, not as proof that every PSTR2 uses it. Keep the device on its isolated local Wi-Fi; do not expose its administration interface to the public internet. Do not reuse this password elsewhere. If a supported settings page later allows changing it, consider doing so only after documenting the original behavior and recovery method. This repository is public, so publishing the default may make other owners aware of it; never add the device's Wi-Fi password, private files, tokens, or captured authenticated requests.
+The user successfully authenticated to this unit's local web login using its default administrator credential pair. This confirms that the browser login is reachable and that the credentials worked on this specific device; it does not prove that every PSTR2 uses the same pair. Because this repository is public, the exact password is intentionally omitted. Keep the device on its isolated local Wi-Fi, do not expose its administration interface to the public internet, and do not reuse the credential elsewhere. Never add the device's Wi-Fi password, private files, tokens, or captured authenticated requests.
 
 ## Confirmed from the original MOSAIC PowerStream iOS app (user observation)
 
