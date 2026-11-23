@@ -279,3 +279,24 @@ menuButton.addEventListener("click", () => showView("device"));
    First confirm the PSTR2's real read-only API, authentication,
    and browser-access behavior. See docs/protocol-notes.md.
 */
+
+
+/* 🟦 #GATEWAY_SHORTCUT — Copy the number-only address when opening the local admin page.
+   The browser handles its own HTTP sign-in prompt; this page cannot fill that prompt. */
+const gatewayButton = document.getElementById("gatewayButton");
+const gatewayCopyStatus = document.getElementById("gatewayCopyStatus");
+
+gatewayButton.addEventListener("click", () => {
+  if (!navigator.clipboard || !navigator.clipboard.writeText) {
+    gatewayCopyStatus.textContent = "Gateway opening. If needed, copy the address shown above.";
+    return;
+  }
+
+  navigator.clipboard.writeText("192.168.10.1")
+    .then(() => {
+      gatewayCopyStatus.textContent = "Copied 192.168.10.1. The gateway is opening in a new tab.";
+    })
+    .catch(() => {
+      gatewayCopyStatus.textContent = "Gateway opening. Clipboard access was unavailable; the address is shown above.";
+    });
+});
