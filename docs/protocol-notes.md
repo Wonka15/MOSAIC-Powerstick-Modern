@@ -39,8 +39,27 @@ The user observed `admin` / `admin` working to dismiss the local prompt on this 
 - The original app includes a built-in video player.
 - MP4 playback supports pause, resume, and seeking.
 
+## Confirmed from the two follow-up interface screenshots
+
+### Connect to Internet / Mosaic AP Feature
+- The page is titled **Mosaic AP Feature** and includes a **SCAN WI-FI** control.
+- It has an **Available Wi-Fi Connections** table with columns **Select**, **SSID**, **Security Mode**, and **Encryption Type**.
+- The visible security-mode choices are **OPEN**, **SHARED**, **WPAPSK**, and **WPA2PSK**.
+- A configuration/status area shows **Status: Disconnect**, an SSID field, **Channel 11**, a MAC address field, **Security Mode: WPA2PSK**, **Encryption Type: AES**, and a Wi-Fi Password field, followed by **Back**, **Apply**, and **Cancel**.
+- This strongly suggests a Wi-Fi scanning/configuration interface for connecting the MOSAIC to another wireless network or configuring its access-point function. The exact operating mode and what Apply changes are not yet verified. Do not submit settings during research.
+
+### MOSAIC Security
+- The page explicitly says: **“Change the security settings and the MOSAIC's WI-FI Password.”**
+- It exposes the current SSID field (shown as **MOSAIC-1DE0**).
+- It exposes **Security Mode** with **WPA-PSK** selected in the screenshot.
+- It exposes **Encryption Type** choices **TKIP**, **AES**, and **TKIPAES**, with **AES** selected.
+- It provides a field to change the MOSAIC Wi-Fi password and **Back**, **Apply**, and **Cancel** controls.
+- The screenshot visibly contains a password value. It is intentionally **not reproduced here** and must not be committed to this public repository, copied into notes, or shared further. The current password should be treated as exposed in the shared screenshot; consider changing it later to a unique value, but only after documenting recovery steps and understanding that changing it will disconnect currently connected devices.
+
 ## Unknown — investigate before implementing
-- What the **Connect to Internet** and **MOSAIC Security** tiles do, and which settings or workflows they open
+- Whether **Mosaic AP Feature** connects MOSAIC as a Wi-Fi client to an upstream router, configures its own access point, or supports both modes
+- What **Apply** changes and whether it restarts the wireless service or changes the device's IP
+- Whether the **MOSAIC Security** page's WPA-PSK setting is for the device's own hotspot only, and whether the login password is separate
 - HTTP endpoints and authentication requirements beyond the observed root prompt
 - Whether the device serves WebDAV, SMB, HTTP, or a proprietary API
 - Whether video playback uses HTTP byte-range requests
@@ -51,8 +70,8 @@ The user observed `admin` / `admin` working to dismiss the local prompt on this 
 
 ## Safe investigation plan
 1. Preserve screenshots of the login prompt and the authenticated MOSAIC landing page.
-2. Inspect **Connect to Internet** first only if you can do so without changing settings; document the screen it opens and stop before applying changes.
-3. Inspect **MOSAIC Security** similarly; document the screen and stop before changing passwords, encryption or network settings.
+2. The **Mosaic AP Feature** screenshot documents a Wi-Fi scan and upstream/access-point configuration controls; do not press Apply until the current settings and recovery method are understood.
+3. The **MOSAIC Security** screenshot documents SSID, WPA-PSK, encryption and Wi-Fi password controls. Do not change these yet; a password change will disconnect clients.
 4. Record the steps and screens used by the original app to browse a folder and play an MP4, if the app can still be run.
 5. Inspect only normal, read-only network traffic where permitted.
 6. Document request paths, methods, response types, and headers without recording passwords or private file contents.
