@@ -32,6 +32,26 @@ The login prompt and its dismissal are useful evidence that a service at the loc
 ### Credential safety
 The user observed `admin` / `admin` working to dismiss the local prompt on this unit. Treat this as a weak/default local-device credential, not as proof that every PSTR2 uses it. Keep the device on its isolated local Wi-Fi; do not expose its administration interface to the public internet. Do not reuse this password elsewhere. If a supported settings page later allows changing it, consider doing so only after documenting the original behavior and recovery method. This repository is public, so publishing the default may make other owners aware of it; never add the device's Wi-Fi password, private files, tokens, or captured authenticated requests.
 
+## Confirmed from the original MOSAIC PowerStream iOS app (user observation)
+
+The user confirms that, after opening the original iOS app and selecting the MOSAIC device, the app displays the device's contents organized into these four categories:
+- **Videos**
+- **Photos**
+- **Music**
+- **Documents**
+
+The user also recalls seeing built-in test films and documentation already present on the MOSAIC. This is a user-observed/recalled content report; the individual files, names, formats, and storage locations have not yet been inventoried. Do not publish private filenames or media contents without permission.
+
+### What this establishes
+- The original app can browse at least a categorized view of content associated with the MOSAIC over its wireless connection.
+- The app's content-browsing function is distinct from the browser administration screens documented above.
+- There is a device-side file/media access mechanism used by the app, but its protocol and API are still **unknown**.
+- This observation does not yet establish that the same file access is exposed through the local administration page, nor does it identify HTTP, WebDAV, SMB, or a proprietary protocol.
+
+### Public historical references
+- Apple App Store listing for **MOSAIC PowerStream** (app ID 1016446202): https://apps.apple.com/us/app/mosaic-powerstream/id1016446202 . The archived listing describes wireless access to videos, photos, music and documents, streaming, backup/organization, and sharing with multiple devices. Listing details are historical and may not reflect current app availability.
+- AIVAnet's review, **Charge, store, and more with the Mosaic (Review)**: https://www.aivanet.com/2015/12/charge-store-and-more-with-the-mosaic-review/ . The review describes browsing and playing content through the app and transferring content to the device using a computer.
+
 ## Confirmed from the user's app description
 - The device creates an ad-hoc Wi-Fi network.
 - The original app can browse the Mosaic folder structure.
