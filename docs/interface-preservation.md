@@ -24,6 +24,12 @@ This is an important separate discovery from the browser administration UI: the 
 
 Historical reference: [Apple App Store listing for MOSAIC PowerStream](https://apps.apple.com/us/app/mosaic-powerstream/id1016446202) and [AIVAnet review](https://www.aivanet.com/2015/12/charge-store-and-more-with-the-mosaic-review/).
 
+## Confirmed wireless video playback
+
+The user has played a built-in movie successfully in the original MOSAIC PowerStream iOS app while connected to the device. This confirms working app-side wireless video retrieval/playback in addition to the four visible library categories. The underlying transport and streaming method remain unknown; do not label it HTTP, WebDAV, SMB, or a proprietary protocol until observed.
+
+This makes a modern media-browser recreation a more concrete goal, but the companion site's current media demo must remain clearly separate from real hardware streaming until the protocol is identified and tested.
+
 ## What we can do without internal access
 
 1. Maintain a screenshot-based catalog of every visible screen.
