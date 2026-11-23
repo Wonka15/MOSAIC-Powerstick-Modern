@@ -29,7 +29,7 @@
         <div class="welcome-copy">
           <p class="eyebrow">YOUR MOSAIC COMPANION</p>
           <h1 id="welcomeTitle">A simpler way<br><span>to manage Mosaic.</span></h1>
-          <p class="intro">Use the original MOSAIC gateway to manage its Wi-Fi connection and security. VLC storage access has been demonstrated; direct browser access is still being researched.</p>
+          <p class="intro">Use the original MOSAIC gateway to manage its Wi-Fi connection and security. MOSAIC storage is working: VLC for iPad connects over SMB, browses the device folders, and plays videos directly from the PowerStick.</p>
         </div>
         <!-- 🟨 #ILLUSTRATION — Decorative connection diagram, not a live status indicator. -->
         <div class="connection-art" aria-label="Illustration of a phone connected to Mosaic, with optional internet connection">
@@ -57,23 +57,23 @@
         <a class="primary-button gateway-button" id="gatewayButton" href="http://192.168.10.1/" target="_blank" rel="noopener noreferrer">Open MOSAIC Gateway <span aria-hidden="true">↗</span></a>
       </section>
 
-      <!-- 🟨 #STORAGE_DEVELOPMENT — Honest status for the separate file-access investigation. -->
+      <!-- 🟩 #STORAGE_WORKING — Confirmed storage access and media playback using VLC. -->
       <section class="storage-launcher" aria-labelledby="storageHeading">
         <div class="storage-launcher-copy">
           <p class="eyebrow">FILE ACCESS RESEARCH</p>
           <h2 id="storageHeading">MOSAIC Storage</h2>
-          <p>VLC for iPad 3.7.4 has successfully browsed the PowerStick storage and played a video. Follow the tested connection instructions in the research archive.</p>
+          <p><strong>Working and tested.</strong> VLC for iPad 3.7.4 connects to the PowerStick over SMB, browses its storage, and plays videos directly from the device. Follow the tested connection instructions in the research archive.</p>
           <details class="storage-details">
             <summary class="soft-button">Storage information <span aria-hidden="true">＋</span></summary>
             <div class="storage-details-content">
-              <p><strong>VLC access verified; browser access in development.</strong> On iPad, VLC 3.7.4 connected to the PowerStick over SMB, opened <code>Public → SDA1</code>, and played a video directly from the device.</p>
-              <p>This website does not yet browse or stream MOSAIC files itself. A GitHub Pages website cannot directly open SMB connections, so a browser-compatible access method still needs to be researched.</p>
+              <p><strong>Storage access is working.</strong> On iPad, VLC 3.7.4 connects to the PowerStick over SMB, opens <code>Public → SDA1</code>, and plays videos directly from the device.</p>
+              <p>The storage itself is fully usable through the tested VLC workflow. A separate future enhancement would be letting this website browse or stream files directly; ordinary GitHub Pages cannot directly open SMB connections.</p>
               <p>See the tested step-by-step VLC instructions and technical findings in the research archive. All device exploration remains read-only.</p>
               <a href="research.html">Read the MOSAIC research archive ↗</a>
             </div>
           </details>
         </div>
-        <span class="development-label">In development</span>
+        <span class="development-label">Working with VLC</span>
       </section>
 
       <!-- 🟦 #RESEARCH_ARCHIVE_LINK — Historical material lives on the dedicated research page. -->
