@@ -62,7 +62,17 @@
         <div class="storage-launcher-copy">
           <p class="eyebrow">FILE ACCESS RESEARCH</p>
           <h2 id="storageHeading">MOSAIC Storage</h2>
-          <p><strong>Working and tested.</strong> VLC for iPad 3.7.4 connects to the PowerStick over SMB, browses its storage, and plays videos directly from the device. Follow the tested connection instructions in the research archive.</p>
+          <p><strong>Working and tested.</strong> Follow these steps to browse and play videos stored on your MOSAIC PowerStick using VLC for iPad 3.7.4.</p>
+          <ol class="storage-steps">
+            <li><strong>Connect to MOSAIC Wi-Fi.</strong><span>On your iPad, open Settings → Wi-Fi and join the wireless network from your PowerStick. Stay connected to it.</span></li>
+            <li><strong>Open VLC and add a server.</strong><span>In VLC, go to Network and choose Add Server / Connect to Server.</span></li>
+            <li><strong>Enter the server details.</strong><span>Choose SMB if asked. For the server address, enter <code>192.168.10.1</code>.</span></li>
+            <li><strong>Sign in.</strong><span>Username: <code>admin</code>. Password: enter the admin password for your PowerStick. If it has never been changed, the default may be <code>admin</code>.</span></li>
+            <li><strong>Open the storage folders.</strong><span>After connecting, open <code>Public</code>, then <code>SDA1</code>.</span></li>
+            <li><strong>Choose a video and play.</strong><span>Tap a video in VLC to play it directly from the PowerStick.</span></li>
+          </ol>
+          <p class="storage-guide-note">Tested successfully on VLC for iPad 3.7.4. Keep file access read-only: do not delete, rename, move, overwrite, or upload files.</p>
+          <p><a href="research.html#vlc-storage">See the full technical notes and troubleshooting ↗</a></p>
           <details class="storage-details">
             <summary class="soft-button">Storage information <span aria-hidden="true">＋</span></summary>
             <div class="storage-details-content">
