@@ -19,21 +19,31 @@ Reference: [Ralink RT5350 preliminary datasheet (2010)](https://cdn.sparkfun.com
 
 ## 1A. Battery pack and board connection — identification still incomplete
 
-The external product label identifies the MOSAIC battery as **4,500 mAh**. The earlier board-photo review did not preserve a sufficiently clear, reusable close-up or a written pin-by-pin description of the battery connection.
+The external product label identifies the MOSAIC battery as **4,500 mAh**. The owner has since clarified the physical arrangement: the device has **two circuit boards stacked together**, the **upper board carries the Ralink RT5350F chip**, and the owner suspects the **lower board contains the USB hardware**. The owner also reports that the lithium battery is **soldered into the board assembly**.
 
-**Confirmed:**
+These are owner-reported observations. The exact board-to-board connector, lower-board components, battery solder points and pack wiring have not been documented in a sufficiently clear close-up.
+
+**Confirmed from the owner's observations:**
 - The product label states 4,500 mAh.
-- The device is a rechargeable, battery-powered product.
+- The owner reports two stacked circuit boards.
+- The owner identifies the RT5350F on the upper board.
+- The owner reports that the lithium battery is soldered into the board assembly.
+
+**Tentative / not yet verified:**
+- The lower board may contain USB hardware; its function has not been confirmed.
+- The exact solder interface is unknown: pack leads to PCB pads, welded cell tabs joined to leads, or another construction.
+- The exact board-to-board interconnect is unknown.
 
 **Not yet confirmed:**
 - Battery chemistry and nominal/maximum voltage.
 - Whether the pack uses one cell or multiple cells.
 - Cell format, dimensions and physical arrangement.
 - Whether the pack includes a protection PCB, temperature sensor or other monitoring lead.
-- Whether the pack connects to the main PCB using a plug, soldered wires, welded tabs or another arrangement.
+- Exact solder points, whether pack leads are soldered to PCB pads, whether cell tabs are welded to leads, and the precise battery wiring.
 - Exact PCB pad names, polarity and charging-controller topology.
+- The function of the lower board. The owner's suggestion that it may carry USB hardware remains a hypothesis, not a component-level identification.
 
-Do not describe the battery as directly soldered to the board until a clear photograph establishes the pack-to-board connection. Even if wires are soldered to PCB pads, that is different from soldering directly to a bare cell.
+The owner's report supports describing the battery as soldered into the board assembly. It does **not** establish that a bare lithium cell is soldered directly to the PCB. Keep those constructions distinct until a clear image or technician inspection confirms the details.
 
 **Repair boundary:** A qualified battery/electronics technician should identify the original pack and its protection/charging arrangement before any replacement is sourced. Never solder directly to a bare lithium-ion cell. Do not open or modify the unit as part of the current external-only research.
 
