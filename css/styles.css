@@ -895,3 +895,34 @@ a.soft-button {
     justify-content: center;
   }
 }
+
+
+/* 🟦 #GATEWAY_ADDRESS — Keep the local address readable without showing its URL scheme. */
+.gateway-address-panel {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 8px;
+  padding: 11px 15px;
+  border: 1px solid #dcebef;
+  border-radius: 12px;
+  background: #fff;
+}
+.gateway-address-label {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+.gateway-address {
+  color: var(--ink);
+  font-size: 22px;
+  letter-spacing: 0.4px;
+  font-variant-numeric: tabular-nums;
+}
+.gateway-copy-status {
+  min-height: 1em;
+  margin-bottom: 0;
+  color: #548477;
+  font-size: 11px;
+}
