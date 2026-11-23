@@ -17,7 +17,7 @@ This roadmap turns the hardware research into a careful, testable modernization 
 | Phase | Goal | Status |
 | --- | --- | --- |
 | 0. Preserve the project | Keep the friendly web prototype and document what is and is not connected | In progress |
-| 1. Identify the hardware | Confirm SoC, RAM, flash, board revision and regulatory identifiers | In progress |
+| 1. Identify the hardware | Record externally visible identifiers; internal component inspection is optional and currently unavailable | External label and prior board-photo research documented |
 | 2. Understand original firmware | Identify OS/firmware, web server, authentication and boot process without writing to device | External web UI confirmed; interface preservation underway |
 | 3. Map device communication | Document read-only file listing, directory navigation and video playback requests | Not started |
 | 4. Connect the modern interface | Replace demo-only data with a safe, tested device adapter | Not started |
@@ -47,11 +47,10 @@ Known evidence:
 - Those chip capabilities do not prove that every interface is wired up or enabled on this particular board.
 
 Tasks:
-- Capture sharp, well-lit photos of all IC markings and PCB silkscreen.
-- Identify the RAM and flash packages from their exact part numbers.
-- Record PCB revision, module labels, antenna connections, connectors and regulatory IDs.
-- Locate any matching FCC or ISED filing using the PSTR2's own identifiers.
-- Preserve the original photos and notes in the project without including passwords or private network details.
+- Preserve the product label, external markings, Wi-Fi SSID/gateway observations, and available user-supplied photographs.
+- Do not require opening the enclosure or inspecting internal components; the user currently has no access to the internals.
+- If clear internal photographs become available in the future, identify components from exact markings and keep conclusions qualified.
+- Preserve externally verifiable FCC/ISED records without treating similar products as proof of the PSTR2's internal design.
 
 **Completion criteria:** A board inventory with confirmed part numbers and clearly marked unknowns.
 
@@ -65,10 +64,9 @@ Tasks:
 - Keep the investigation within the exposed browser interface; internal firmware, shell, serial, source code and storage access are not currently available.
 - Recreate the observed screens in the companion website as a clearly labeled, non-connected simulation before attempting any live integration.
 - See [protocol notes](protocol-notes.md) and [interface preservation plan](interface-preservation.md).
-- Determine whether the web interface is served by the device itself and identify the server/software only from reliable evidence.
-- Investigate firmware family, kernel/OS, bootloader and version where safely observable.
-- Determine RAM and flash size before evaluating firmware options.
-- If firmware extraction becomes appropriate, plan a verified read-only backup method first.
+- Map the visible pages, navigation, labels, and status indicators.
+- Keep firmware family, kernel/OS, bootloader, RAM/flash size, and server implementation marked unknown unless external evidence reliably establishes them.
+- Do not plan firmware extraction or internal inspection as part of the current scope.
 
 Safety rules:
 - Do not brute-force or guess credentials.
