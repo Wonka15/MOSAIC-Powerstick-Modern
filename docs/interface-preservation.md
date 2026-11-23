@@ -16,6 +16,14 @@ Observed during testing:
 
 These are observations of visible UI, not proof of undocumented internal architecture. Exact behavior of Scan, Apply, connection modes, and security settings remains unverified. No settings have been changed as part of this research.
 
+## Confirmed app-side storage browsing
+
+The user confirms that the original MOSAIC PowerStream iOS app can connect to the device and show four content categories: **Videos, Photos, Music, and Documents**. The user also recalls built-in test films and documentation stored on the device. This is direct user observation of the app's visible behavior, not a protocol-level finding.
+
+This is an important separate discovery from the browser administration UI: the original app can browse a categorized media/document library, while the browser page at the local gateway has so far shown network/security administration. The file-access service/API used by the app remains unidentified. Do not assume that the admin web server itself exposes the library.
+
+Historical reference: [Apple App Store listing for MOSAIC PowerStream](https://apps.apple.com/us/app/mosaic-powerstream/id1016446202) and [AIVAnet review](https://www.aivanet.com/2015/12/charge-store-and-more-with-the-mosaic-review/).
+
 ## What we can do without internal access
 
 1. Maintain a screenshot-based catalog of every visible screen.
