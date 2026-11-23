@@ -9,7 +9,7 @@ Preserve and modernize the original PowerStick MOSAIC experience using only the 
 The user has reached the local interface at `http://192.168.10.1/` while connected to the MOSAIC Wi-Fi network.
 
 Observed during testing:
-- Browser authentication prompt; the user reports `admin` / `admin` dismisses it on this device.
+- **Web login credentials discovered and tested:** the user successfully authenticated to this specific unit with its default administrator credential pair. The exact password is intentionally omitted from this public repository.
 - MOSAIC by Powerstick landing page with **Connect to Internet** and **MOSAIC Security** tiles.
 - **Mosaic AP Feature** page with a **SCAN WI-FI** control, an Available Wi-Fi Connections table, security-mode labels (OPEN, SHARED, WPAPSK, WPA2PSK), channel and MAC fields, security/encryption selectors, Wi-Fi password field, and Back / Apply / Cancel controls.
 - **MOSAIC Security** page explicitly describes changing security settings and the MOSAIC Wi-Fi password. It shows SSID, WPA-PSK, encryption choices TKIP/AES/TKIPAES, a password field, and Back / Apply / Cancel controls.
@@ -49,7 +49,7 @@ Historical reference: [Apple App Store listing for MOSAIC PowerStream](https://a
 - Changing Wi-Fi security settings may disconnect every currently connected device.
 - Do not factory-reset, flash firmware, or send guessed requests.
 - The user's screenshot exposed a Wi-Fi password. It is intentionally omitted from this repository; do not reproduce it in code, documentation, issues, or commits.
-- The observed `admin` / `admin` browser login is documented in the protocol notes as a device-specific observation, not a secure credential recommendation.
+- The successful default administrator login is documented as a device-specific finding in the protocol notes. The exact password is omitted from this public repository; do not reuse the credential or expose the local admin interface to the public internet.
 - Keep the device's local administration interface off the public internet.
 
 ## Next milestone
