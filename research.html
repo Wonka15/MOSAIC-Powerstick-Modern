@@ -233,6 +233,38 @@
           </div>
           <div class="archive-note"><strong>Preservation policy:</strong> source links and uncertainty are retained. We will not infer video titles, uploader identities, or individual engineering contributions without checking the original material.</div>
         </section>
+
+        <section class="archive-section" id="hardware">
+          <h2>08 · Hardware identification: processor and battery</h2>
+          <p class="archive-section-intro">The owner's board photographs appear to show a Ralink RT5350F system-on-chip. The battery label identifies a 4,500 mAh pack. This section separates visible markings and datasheet specifications from details that still need a clearer photograph or technician inspection.</p>
+          <div class="archive-grid">
+            <article class="archive-card">
+              <span class="archive-kicker">CHIP IDENTIFIED FROM OWNER PHOTO</span>
+              <h3>Ralink RT5350F networking SoC</h3>
+              <p><strong>Marking:</strong> RT5350F · <strong>Manufacturer:</strong> Ralink Technology (later part of MediaTek).</p>
+              <ul>
+                <li>360 MHz MIPS 24KEc processor core</li>
+                <li>Integrated 2.4 GHz 802.11b/g/n 1T1R wireless networking</li>
+                <li>Integrated five-port 10/100 Ethernet switch/PHY</li>
+                <li>USB 2.0 host/device interface</li>
+                <li>16-bit SDR SDRAM interface, supporting up to 64 MB</li>
+                <li>Peripheral interfaces include SPI, I²C, UART, I²S, PCM and GPIO</li>
+              </ul>
+              <p>These are capabilities of the chip itself. They do not prove which interfaces MOSAIC actually wires up, its RAM or flash capacity, or which firmware it runs.</p>
+              <p><a href="https://cdn.sparkfun.com/datasheets/Wireless/WiFi/RT5350.pdf" target="_blank" rel="noopener noreferrer">Read the Ralink RT5350 preliminary datasheet ↗</a></p>
+            </article>
+            <article class="archive-card">
+              <span class="archive-kicker">BATTERY · PACK DETAILS NOT YET VERIFIED</span>
+              <h3>4,500 mAh lithium battery</h3>
+              <p>The external MOSAIC label specifies a 4,500 mAh battery. The exact cell chemistry, nominal voltage, cell arrangement, pack dimensions, protection board, temperature sensor and wiring layout have not yet been confirmed.</p>
+              <p><strong>Board attachment:</strong> The retained research notes do not establish whether the battery pack connects through a plug, soldered wires, or another arrangement. We therefore cannot yet state which board pads are used or describe the original solder joints as confirmed.</p>
+              <p>If a technician confirms that the pack leads are soldered to PCB pads, a future replacement would involve servicing the pack-to-board connection—not soldering directly to the bare lithium-ion cell. The replacement must match the original electrical specifications and retain appropriate protection and charging controls.</p>
+              <p><strong>Safety:</strong> Do not heat, puncture, short, or solder directly to a bare lithium-ion cell. Do not open the device or buy a replacement pack until its exact specifications and protection circuitry have been identified. Battery work is reserved for a qualified technician.</p>
+            </article>
+          </div>
+          <div class="archive-note"><strong>Photo preservation note:</strong> The earlier board photo is not currently available as a reusable image file in this repository. The chip identification is documented from the earlier visual review, but a fresh copy of the original photo is needed before embedding it here. We will not substitute a generic chip photograph and imply it is the MOSAIC board.</div>
+          <p class="archive-section-intro" style="margin-top:15px"><a href="docs/hardware-and-company-history.md">Open the detailed hardware research notes →</a> · <a href="docs/roadmap.md">View the hardware and battery roadmap →</a></p>
+        </section>
       </div>
     </main>
     <footer class="archive-footer">MOSAIC Powerstick Modern · Independent preservation and research project. This archive is not an official PowerStick support site. <a href="index.html">Return to the companion app</a>.</footer>
