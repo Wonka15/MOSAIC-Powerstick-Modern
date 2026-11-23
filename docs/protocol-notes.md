@@ -56,6 +56,18 @@ The user observed `admin` / `admin` working to dismiss the local prompt on this 
 - It provides a field to change the MOSAIC Wi-Fi password and **Back**, **Apply**, and **Cancel** controls.
 - The screenshot visibly contains a password value. It is intentionally **not reproduced here** and must not be committed to this public repository, copied into notes, or shared further. The current password should be treated as exposed in the shared screenshot; consider changing it later to a unique value, but only after documenting recovery steps and understanding that changing it will disconnect currently connected devices.
 
+## Current access boundary and preservation strategy
+
+The user currently has access only to the external device and its browser-based local interface. There is no access to internal firmware files, shell/console, serial interface, source code, or internal storage contents. The project must therefore proceed using the exposed interface and ordinary user-visible behavior; do not make internal access a prerequisite.
+
+This is an **interface-preservation and black-box research** project:
+1. Preserve screenshots and transcribe visible labels, controls, and status values.
+2. Explore only ordinary UI navigation and read-only actions where possible.
+3. Record what a control visibly does before inferring its purpose.
+4. Do not submit configuration changes, reset, flash, or write data without an explicit test plan and recovery path.
+5. Recreate the documented experience in the companion website as a clearly labeled simulation first. Do not imply simulated controls are connected to the hardware.
+6. Keep unknown internal details explicitly unknown. The exposed UI does not prove the OS, firmware family, storage protocol, or internal architecture.
+
 ## Unknown — investigate before implementing
 - Whether **Mosaic AP Feature** connects MOSAIC as a Wi-Fi client to an upstream router, configures its own access point, or supports both modes
 - What **Apply** changes and whether it restarts the wireless service or changes the device's IP
@@ -66,7 +78,7 @@ The user observed `admin` / `admin` working to dismiss the local prompt on this 
 - Upload and delete behavior
 - CORS behavior and whether a local companion service is needed
 - Storage capacity and battery-status endpoints
-- What “Connect to Internet” and “Mosaic Security” refer to in the user's current screen
+- Whether the device exposes any additional file-browsing or media functions through its external interface
 
 ## Safe investigation plan
 1. Preserve screenshots of the login prompt and the authenticated MOSAIC landing page.
