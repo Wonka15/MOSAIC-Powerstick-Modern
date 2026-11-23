@@ -5,134 +5,76 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#168fba">
-  <meta name="description" content="A modern, friendly companion interface for the MOSAIC Powerstream PSTR2.">
+  <meta name="description" content="A friendly companion and preservation guide for the MOSAIC Powerstream PSTR2.">
   <title>Mosaic Powerstick Modern</title>
-
-  <!-- 🟦 #STYLESHEET — Keep visual design rules in the CSS file. -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="app-shell">
-    <!-- 🟦 #SITE_HEADER — Brand and connection-status area. -->
+    <!-- 🟦 #SITE_HEADER — Brand and project navigation. -->
     <header class="topbar">
       <a class="brand" href="#" aria-label="Mosaic home">
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-        <span>
-          <strong>Mosaic</strong>
-          <small>POWERSTICK MODERN</small>
-        </span>
+        <span><strong>Mosaic</strong><small>POWERSTICK MODERN</small></span>
       </a>
-
       <a class="topbar-archive-link" href="research.html">Research archive ↗</a>
       <div class="connection-pill" role="status" aria-live="polite">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span>Ready to connect</span>
+        <span class="status-dot" aria-hidden="true"></span><span>Ready to connect</span>
       </div>
-
-      <button class="icon-button" id="menuButton" type="button" aria-label="Open device details">☰</button>
     </header>
 
     <main>
-      <!-- 🟩 #WELCOME_PANEL — Friendly introduction and navigation shortcuts. -->
+      <!-- 🟩 #WELCOME_PANEL — Explain what this companion website does. -->
       <section class="welcome" aria-labelledby="welcomeTitle">
         <div class="welcome-copy">
-          <p class="eyebrow">YOUR PERSONAL MEDIA HUB</p>
-          <h1 id="welcomeTitle">Everything in<br><span>one little place.</span></h1>
-          <p class="intro">Browse your Mosaic Powerstick, enjoy your media, and move between devices with ease.</p>
-
-          <div class="welcome-actions">
-            <button class="primary-button" type="button" data-view="mosaic">Browse Mosaic <span>→</span></button>
-            <button class="soft-button" type="button" data-view="iphone">Browse this device</button>
-            <a class="soft-button archive-shortcut" href="research.html">Explore project history ↗</a>
-          </div>
+          <p class="eyebrow">YOUR MOSAIC COMPANION</p>
+          <h1 id="welcomeTitle">A simpler way<br><span>to manage Mosaic.</span></h1>
+          <p class="intro">Use the original MOSAIC gateway to manage its Wi-Fi connection and security. Storage access is being researched separately.</p>
         </div>
-
-        <!-- 🟨 #ILLUSTRATION — Decorative connection diagram; not a live status indicator. -->
+        <!-- 🟨 #ILLUSTRATION — Decorative connection diagram, not a live status indicator. -->
         <div class="connection-art" aria-label="Illustration of a phone connected to Mosaic, with optional internet connection">
-          <div class="device-node">
-            <span class="node-icon" aria-hidden="true">▯</span>
-            <b>Your device</b>
-            <small>Phone or tablet</small>
-          </div>
+          <div class="device-node"><span class="node-icon" aria-hidden="true">▯</span><b>Your device</b><small>Phone or tablet</small></div>
           <div class="link-line" aria-hidden="true"><span></span></div>
-          <div class="device-node mosaic-node">
-            <span class="mosaic-symbol" aria-hidden="true">M</span>
-            <b>Mosaic</b>
-            <small>Powerstream</small>
-          </div>
+          <div class="device-node mosaic-node"><span class="mosaic-symbol" aria-hidden="true">M</span><b>Mosaic</b><small>Powerstream</small></div>
           <div class="link-line muted-line" aria-hidden="true"><span></span></div>
-          <div class="internet-node">
-            <span aria-hidden="true">◎</span>
-            <small>Internet<br>optional</small>
-          </div>
+          <div class="internet-node"><span aria-hidden="true">◎</span><small>Internet<br>optional</small></div>
         </div>
       </section>
 
-      <!-- 🟦 #MOSAIC_GATEWAY — Opens the local admin page and copies its number-only address. -->
+      <!-- 🟦 #MOSAIC_GATEWAY — Opens the device's original network and security settings. -->
       <section class="wifi-launcher" aria-labelledby="wifiLauncherTitle">
         <div class="wifi-launcher-copy">
-          <p class="eyebrow">ALREADY CONNECTED TO MOSAIC WI-FI?</p>
+          <p class="eyebrow">NETWORK & SECURITY SETTINGS</p>
           <h2 id="wifiLauncherTitle">MOSAIC Gateway</h2>
-          <p>Tap the gateway button while your phone is connected to the MOSAIC Wi-Fi network.</p>
+          <p>Connect your phone or tablet to the MOSAIC Wi-Fi network, then open the original gateway to change network or Wi-Fi security settings.</p>
           <div class="gateway-address-panel">
             <span class="gateway-address-label">GATEWAY ADDRESS</span>
             <strong class="gateway-address">192.168.10.1</strong>
           </div>
-          <p class="wifi-launcher-note"><strong>Sign-in:</strong> The gateway may show your browser's built-in username and password prompt. Enter the administrator credentials there. A website cannot automatically fill that browser security prompt.</p>
+          <p class="wifi-launcher-note"><strong>Sign-in:</strong> The gateway may show your browser's built-in username and password prompt. Enter the administrator credentials there. This website does not store or fill your password.</p>
           <p class="gateway-copy-status" id="gatewayCopyStatus" role="status" aria-live="polite">The address will be copied when you open the gateway.</p>
         </div>
-        <a class="primary-button gateway-button" id="gatewayButton" href="http://192.168.10.1/" target="_blank" rel="noopener noreferrer">MOSAIC Gateway <span aria-hidden="true">↗</span></a>
+        <a class="primary-button gateway-button" id="gatewayButton" href="http://192.168.10.1/" target="_blank" rel="noopener noreferrer">Open MOSAIC Gateway <span aria-hidden="true">↗</span></a>
       </section>
 
-      <!-- 🟦 #LIBRARY_SHORTCUTS — These buttons open the matching library views. -->
-      <section class="section-heading" aria-labelledby="libraryHeading">
-        <div>
-          <p class="eyebrow">PICK UP WHERE YOU LEFT OFF</p>
-          <h2 id="libraryHeading">Your library</h2>
+      <!-- 🟨 #STORAGE_DEVELOPMENT — Honest status for the separate file-access investigation. -->
+      <section class="storage-launcher" aria-labelledby="storageHeading">
+        <div class="storage-launcher-copy">
+          <p class="eyebrow">FILE ACCESS RESEARCH</p>
+          <h2 id="storageHeading">MOSAIC Storage</h2>
+          <p>Learn what we know about the device's built-in storage and what still needs to be discovered.</p>
+          <details class="storage-details">
+            <summary class="soft-button">Storage information <span aria-hidden="true">＋</span></summary>
+            <div class="storage-details-content">
+              <p><strong>In development.</strong> The original MOSAIC mobile app can browse Videos, Photos, Music, and Documents, and can play selected videos.</p>
+              <p>We have not yet confirmed the file-access protocol or how a modern browser can safely connect to it. This website does not currently browse, download, upload, or stream files from MOSAIC.</p>
+              <p>Our next step is read-only research into how the original app communicates with the device, without opening the hardware or changing its settings.</p>
+              <a href="research.html">Read the MOSAIC research archive ↗</a>
+            </div>
+          </details>
         </div>
-        <button class="text-button" type="button" data-view="mosaic">View all <span>→</span></button>
+        <span class="development-label">In development</span>
       </section>
-
-      <section class="library-grid" aria-label="Media categories">
-        <button class="library-card photos-card" type="button" data-view="photos">
-          <span class="card-icon" aria-hidden="true">▧</span>
-          <span class="card-label">Photos</span>
-          <small>Memories, all together</small>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </button>
-        <button class="library-card videos-card" type="button" data-view="videos">
-          <span class="card-icon" aria-hidden="true">▶</span>
-          <span class="card-label">Videos</span>
-          <small>Watch right here</small>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </button>
-        <button class="library-card music-card" type="button" data-view="music">
-          <span class="card-icon" aria-hidden="true">♫</span>
-          <span class="card-label">Music</span>
-          <small>Your favorite sounds</small>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </button>
-        <button class="library-card files-card" type="button" data-view="files">
-          <span class="card-icon" aria-hidden="true">▤</span>
-          <span class="card-label">Documents</span>
-          <small>Files and folders</small>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </button>
-      </section>
-
-      <!-- 🟩 #DEVICE_PROMO — Opens the verified hardware details currently known. -->
-      <section class="device-panel" aria-labelledby="devicePanelHeading">
-        <div class="device-copy">
-          <div class="device-badge" aria-hidden="true">M</div>
-          <div>
-            <p class="eyebrow">YOUR POWERSTICK</p>
-            <h2 id="devicePanelHeading">Mosaic is ready when you are</h2>
-            <p>Connect to your Powerstick's Wi-Fi, then open its library.</p>
-          </div>
-        </div>
-        <button class="outline-button" type="button" data-view="device">Device details <span>→</span></button>
-      </section>
-
 
       <!-- 🟦 #RESEARCH_ARCHIVE_LINK — Historical material lives on the dedicated research page. -->
       <section class="history-section archive-promo" aria-labelledby="archivePromoHeading">
@@ -143,34 +85,9 @@
           <a class="primary-button" href="research.html">Open the research archive <span aria-hidden="true">→</span></a>
         </div>
       </section>
-
-      <!-- 🟦 #DYNAMIC_CONTENT — JavaScript fills this area when a section is selected. -->
-      <section class="content-view hidden" id="contentView" aria-labelledby="viewTitle">
-        <div class="view-heading">
-          <div>
-            <p class="eyebrow" id="viewEyebrow">YOUR LIBRARY</p>
-            <h2 id="viewTitle">Mosaic files</h2>
-          </div>
-          <button class="soft-button" id="homeButton" type="button">← Home</button>
-        </div>
-        <div id="viewContent" aria-live="polite"></div>
-      </section>
     </main>
-
-    <!-- 🟦 #BOTTOM_NAVIGATION — Large, touch-friendly navigation for small screens. -->
-    <nav class="bottom-nav" aria-label="Main navigation">
-      <button class="nav-item active" type="button" data-view="home" aria-current="page"><span aria-hidden="true">⌂</span><small>Home</small></button>
-      <button class="nav-item" type="button" data-view="mosaic"><span aria-hidden="true">▱</span><small>Mosaic</small></button>
-      <button class="nav-item" type="button" data-view="iphone"><span aria-hidden="true">▯</span><small>This device</small></button>
-      <button class="nav-item" type="button" data-view="favorites"><span aria-hidden="true">☆</span><small>Favorites</small></button>
-      <button class="nav-item" type="button" data-view="recent"><span aria-hidden="true">◷</span><small>Recent</small></button>
-    </nav>
   </div>
-
-  <!-- 🟨 #LOCAL_VIDEO_INPUT — The selected file stays in this browser; it is not uploaded. -->
-  <input type="file" id="videoPicker" accept="video/mp4,video/*" hidden>
-
-  <!-- 🟦 #APP_SCRIPT — Load the behavior after the page elements exist. -->
+  <!-- 🟦 #APP_SCRIPT — Handles the gateway address-copy shortcut only. -->
   <script src="js/app.js"></script>
 </body>
 </html>
