@@ -102,6 +102,54 @@ A normal browser application hosted on GitHub Pages cannot directly open arbitra
 
 A future web companion may need a supported HTTP endpoint on the PowerStick, a local helper/bridge application, or another compatible access method. Do not assume that GitHub Pages alone can browse SMB shares.
 
+
+## Experimental local web bridge — architecture option, not yet tested
+
+A separate local bridge is a possible way to provide a browser-friendly interface while preserving the PSTR2's existing SMB storage service. This is an **experimental architecture proposal**, not a working feature or confirmed compatibility result.
+
+### Proposed arrangement A: bridge joins the MOSAIC Wi-Fi
+
+1. Run a bridge service on a laptop or Raspberry Pi that can join the MOSAIC Wi-Fi network.
+2. The bridge connects locally to the PSTR2 SMB service at `192.168.10.1`.
+3. A phone or tablet joins the same MOSAIC Wi-Fi and opens the bridge device's local HTTP address in its browser.
+4. The bridge presents a web file browser or media interface, translating browser requests into local SMB access.
+
+This would be self-hosted on the local network. It would not require hosting the bridge online, and GitHub Pages would remain a separate documentation/landing page rather than the SMB client.
+
+**Candidate software mentioned for evaluation:** Sambee (described in the proposal as Docker-deployable) and Filestash. Their current installation requirements, exact SMB dialect support, security model, and suitability for this PSTR2 have not been independently verified in this project. Do not treat either as a confirmed solution.
+
+### Proposed arrangement B: put the PSTR2 on an existing home network
+
+The authenticated gateway screenshot shows a **Connect to Internet / Mosaic AP Feature** interface with Wi-Fi scanning and configuration controls. This suggests the device may support connecting to an upstream Wi-Fi network, but its exact operating mode and effect on the PSTR2's own access point are not confirmed.
+
+If the PSTR2 can safely join a home Wi-Fi network while keeping its storage service reachable, a bridge on that same home network might access it while the phone/tablet stays online. This should be tested before investing in a bridge deployment. Do not press Apply or change wireless settings until the current configuration, expected IP changes, and recovery path are understood.
+
+### Compatibility caveat: SMB dialect
+
+- VLC successfully accessed the PSTR2 over SMB, but the negotiated dialect (SMB1/NT1, SMB2, or SMB3) has not been recorded.
+- Apple Files failed in the owner's test; the exact error and cause are unknown.
+- SMB1 remains a hypothesis only. The Files failure does not prove SMB1.
+- The proposal states that Sambee supports SMB2 and SMB3; that claim and the exact versions supported by the selected release/image must be checked against its current documentation before deployment.
+- Filestash is another candidate, but its SMB dialect support has not been established in this research.
+
+If the PSTR2 only supports SMB1, a bridge that requires SMB2/SMB3 may not connect. A read-only diagnostic that records the dialect negotiated by VLC is the most useful next test. Do not weaken security settings or expose SMB1 to an untrusted network as a workaround.
+
+### Firmware modification — unknown and out of scope for now
+
+Whether the PSTR2 firmware can be modified is unknown. The chip marking alone does not establish firmware source availability, bootloader access, recovery options, flash layout, signing/verification behavior, or whether a safe replacement image exists. No firmware modification, flashing, reset, shell access, or write operation is currently authorized or planned. Preserve the original device and investigate its exposed interfaces first.
+
+### Status checklist
+
+- [ ] Verify Sambee's current Docker deployment instructions and SMB dialect support.
+- [ ] Verify Filestash's current SMB dialect support and deployment requirements.
+- [ ] Capture the SMB dialect negotiated by VLC with a read-only diagnostic.
+- [ ] Determine whether the PSTR2 can join an upstream/home Wi-Fi network without losing local access.
+- [ ] Document the PSTR2's IP address and recovery method before any network-mode experiment.
+- [ ] Test a local bridge only after protocol compatibility is established.
+- [ ] Establish whether any firmware recovery or modification path exists before considering firmware work.
+
+**Current status:** VLC/SMB access is confirmed. A browser bridge, home-network client mode, compatibility of either bridge candidate, and firmware modifiability are all **unknown / experimental**.
+
 ## Safe, read-only investigation checklist
 
 - [x] Fing scan reported six open ports: 23, 53, 80, 120, 139, and 445.
