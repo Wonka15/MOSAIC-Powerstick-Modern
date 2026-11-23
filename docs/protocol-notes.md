@@ -42,6 +42,14 @@ The user confirms that, after opening the original iOS app and selecting the MOS
 
 The user also recalls seeing built-in test films and documentation already present on the MOSAIC. This is a user-observed/recalled content report; the individual files, names, formats, and storage locations have not yet been inventoried. Do not publish private filenames or media contents without permission.
 
+### Confirmed video playback test (user observation)
+
+The user has now tested a built-in movie through the original MOSAIC PowerStream iOS app while connected to the device, and confirms that **the movie plays successfully**.
+
+This establishes that the original app can retrieve video data from the MOSAIC over its wireless connection and deliver it to the app's player. It is stronger evidence than merely seeing a Videos category or file listing. It does **not** yet identify the transport protocol, request URL, codec/container details, whether playback is progressive or buffered, or whether HTTP byte-range requests are used.
+
+Next safe observations, if convenient: note whether playback continues with the phone's internet disconnected (while remaining connected to MOSAIC Wi-Fi), and whether pause/resume and seeking work. Do not share private filenames, media URLs, credentials, or authenticated traffic captures.
+
 ### What this establishes
 - The original app can browse at least a categorized view of content associated with the MOSAIC over its wireless connection.
 - The app's content-browsing function is distinct from the browser administration screens documented above.
