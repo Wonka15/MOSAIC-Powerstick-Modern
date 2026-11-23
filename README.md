@@ -75,7 +75,7 @@ Search the repository for a hashtag to find related code. See [docs/code-map.md]
 ## Safety and privacy
 
 - Never commit the Powerstick Wi-Fi password, private media, session tokens, or personal network details.
-- The observed local browser login (`admin` / `admin`) is documented as a device-specific research finding in `docs/protocol-notes.md`; do not reuse it elsewhere or expose the administration interface to the public internet.
+- A working default administrator login was discovered and tested on this unit. The finding is documented in `docs/protocol-notes.md`; the exact password is intentionally omitted from this public repository. Do not reuse the credential or expose the administration interface to the public internet.
 - A user screenshot exposed the device's Wi-Fi password. It has intentionally **not** been copied into this project.
 - Do not attempt firmware changes or open the enclosure while the battery is connected. Start with read-only network research.
 
