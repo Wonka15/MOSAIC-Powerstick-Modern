@@ -226,6 +226,40 @@
           </div>
         </section>
 
+
+        <section class="archive-section" id="local-bridge">
+          <h2>Experimental option · A self-hosted local web bridge</h2>
+          <p class="archive-section-intro">A local bridge could translate the PSTR2's SMB file share into a browser-friendly interface. This is an architecture proposal only: no bridge has been installed or tested with the PowerStick.</p>
+          <div class="archive-grid">
+            <article class="archive-card">
+              <span class="archive-kicker">OPTION A · LOCAL MOSAIC WI-FI</span>
+              <h3>Run the bridge on a laptop or Raspberry Pi</h3>
+              <p>A laptop or Raspberry Pi joins the MOSAIC Wi-Fi and runs a local bridge service. Your phone or tablet joins the same Wi-Fi and opens the bridge's local address in a browser. The bridge—not the browser—would connect to the PSTR2 over SMB.</p>
+              <p>This would be self-hosted on the local network. Nothing needs to be hosted online. Sambee (proposed as a Docker deployment) and Filestash are candidates to investigate, not confirmed compatible solutions.</p>
+            </article>
+            <article class="archive-card">
+              <span class="archive-kicker">OPTION B · HOME WI-FI</span>
+              <h3>Connect the PSTR2 to your home network</h3>
+              <p>The gateway includes a “Connect to Internet” / “Mosaic AP Feature” screen with Wi-Fi scanning and configuration controls. It may allow the PSTR2 to join an upstream home network, but this behavior has not been tested or confirmed.</p>
+              <p>If it works while keeping storage reachable, a bridge on the home network could access the PSTR2 while your phone stays online. Test and document the device's current settings and recovery path before changing anything.</p>
+            </article>
+            <article class="archive-card">
+              <span class="archive-kicker">IMPORTANT · SMB COMPATIBILITY</span>
+              <h3>The negotiated SMB version is unknown</h3>
+              <p>VLC's successful connection confirms SMB access, but not whether the PSTR2 negotiates SMB1, SMB2, or SMB3. Apple Files failed; that does not prove SMB1.</p>
+              <p>The proposal says Sambee supports SMB2/SMB3, but its exact version requirements must be checked. Filestash's supported SMB versions also need verification. If the PSTR2 only offers SMB1, a bridge requiring SMB2/3 may not work.</p>
+              <p>The next useful test is to record the SMB dialect negotiated by VLC using a read-only diagnostic.</p>
+            </article>
+            <article class="archive-card">
+              <span class="archive-kicker">FIRMWARE · UNKNOWN</span>
+              <h3>Firmware modification is not established</h3>
+              <p>We do not yet know whether the PSTR2 firmware can be modified safely. The chip identification does not prove bootloader access, available source code, flash layout, recovery options, or a compatible replacement firmware.</p>
+              <p>No firmware flashing, reset, shell commands, or write operations are part of the current plan. Preserve the original device while documenting what can be observed safely.</p>
+            </article>
+          </div>
+          <div class="archive-note"><strong>Research status:</strong> VLC/SMB playback is confirmed. The bridge software, SMB dialect, home-Wi-Fi client mode, and firmware modifiability remain unknown or experimental. See the <a href="docs/research/network-discovery.md">network discovery log</a> for the test checklist and evidence boundaries.</div>
+        </section>
+
         <section class="archive-section" id="media">
           <h2>07 · Original video sources</h2>
           <p class="archive-section-intro">These three supplied YouTube references are preserved as primary media leads. Their titles, upload dates, channel names, and exact relevance still need to be checked against the original uploads.</p>
