@@ -6,16 +6,18 @@
 
 ## Summary
 
-A Fing scan of the MOSAIC PowerStick's Wi-Fi network identified six open TCP ports. Separately, the device's storage was successfully accessed from **VLC for iPad, version 3.7.4**, using an SMB network-share connection.
+A Fing scan of the MOSAIC PowerStick's Wi-Fi network identified six open TCP ports. Separately, the device's storage was successfully accessed from **VLC for iPad, version 3.7.4**, using an SMB network-share connection. The user confirmed the complete workflow: connect to MOSAIC Wi-Fi, add the SMB server in VLC, enter the server IP and login, then browse `Public → SDA1`. A video was successfully played directly from the PowerStick.
 
 This is an important milestone: the PSTR2 exposes a network file-sharing service that a third-party iPad application can use, independently of the original MOSAIC app.
 
 ## Confirmed user testing
 
 - **Client:** VLC for iPad, version 3.7.4
-- **Result:** Successfully connected to and browsed the PowerStick's storage.
+- **Result:** Successfully connected, browsed the storage, and played a video directly from the PowerStick.
 - **Device address used:** `192.168.10.1`
 - **Protocol identified by the client/workflow:** SMB
+- **Folder navigation after connection:** `Public` → `SDA1`
+- **Connection sequence:** Join MOSAIC Wi-Fi → open VLC → add/connect to a server → enter `192.168.10.1` → select SMB if prompted → enter username `admin` and the device password → connect → open `Public` → open `SDA1`.
 - **Access mode for ongoing investigation:** Read-only. Do not delete, rename, move, upload, or modify device files.
 
 The user also reported that Apple's Files app did not connect successfully. The exact error message and SMB negotiation details have not yet been captured.
@@ -39,10 +41,18 @@ Fing reported the following six open ports/services:
 
 The SMB connection information used during testing was:
 
+- First connect the iPad to the MOSAIC Wi-Fi network.
+- In VLC, choose the option to add/connect to a network server.
 - Server: `192.168.10.1`
+- Protocol: SMB
 - Username entered during testing: `admin`
-- Password: **not recorded in this public research document**
+- Password: **not recorded in this public research document**; enter the password configured on the device. The owner reported that the tested default was `admin`, but this credential is intentionally not published here.
+- After connecting, open `Public`, then `SDA1` to reach the storage.
 - Ports observed: TCP 139 and TCP 445
+
+### Confirmed media playback
+
+The owner successfully opened and played a video in VLC directly from the PowerStick storage. This confirms that the VLC/SMB path supports at least the tested video playback scenario. It does not establish the full list of supported formats, streaming performance, or browser compatibility.
 
 Credentials are intentionally omitted from this repository document. Do not publish passwords, tokens, or other device secrets in issues, commits, screenshots, or logs.
 
@@ -96,6 +106,8 @@ A future web companion may need a supported HTTP endpoint on the PowerStick, a l
 
 - [x] Fing scan reported six open ports: 23, 53, 80, 120, 139, and 445.
 - [x] VLC for iPad 3.7.4 successfully accessed the PowerStick storage over SMB.
+- [x] Confirmed navigation path after connecting: `Public` → `SDA1`.
+- [x] Owner successfully played a video directly from the PowerStick in VLC.
 - [ ] Record the exact SMB share names shown by VLC.
 - [ ] Record the top-level directory names separately from share names.
 - [ ] Record observed file extensions and sample counts without opening or changing files unnecessarily.
