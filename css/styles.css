@@ -1076,3 +1076,41 @@ a.soft-button {
   background: #f1faf5;
   color: #245c42;
 }
+
+
+/* 🟩 #VLC_DOWNLOAD_LINKS — Compact official download links beside the tested setup guide. */
+.vlc-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+.vlc-downloads-label {
+  margin-right: 3px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 1.2px;
+}
+.vlc-download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1px solid #d5e8ec;
+  border-radius: 10px;
+  background: #fff;
+  color: #167b9b;
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+}
+.vlc-download-button:hover {
+  transform: translateY(-1px);
+  background: #edf8fa;
+}
+.vlc-download-button span {
+  font-size: 12px;
+}
