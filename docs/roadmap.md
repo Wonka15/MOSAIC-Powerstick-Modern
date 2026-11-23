@@ -19,7 +19,7 @@ This roadmap turns the hardware research into a careful, testable modernization 
 | 0. Preserve the project | Keep the friendly web prototype and document what is and is not connected | In progress |
 | 1. Identify the hardware | Record externally visible identifiers; internal component inspection is optional and currently unavailable | External label and prior board-photo research documented |
 | 2. Understand original firmware | Identify OS/firmware, web server, authentication and boot process without writing to device | External web UI confirmed; interface preservation underway |
-| 3. Map device communication | Document read-only file listing, directory navigation and video playback requests | Not started |
+| 3. Map device communication | Document read-only file listing, directory navigation and video playback requests | In progress — original app browsing and built-in video playback confirmed; protocol still unknown |
 | 4. Connect the modern interface | Replace demo-only data with a safe, tested device adapter | Not started |
 | 5. Improve media and storage features | Test streaming, multiple clients and compatible external storage | Not started |
 | 6. Evaluate firmware modernization | Assess feasibility only after memory, bootloader, backups and board support are known | Blocked by earlier phases |
