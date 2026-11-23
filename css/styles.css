@@ -926,3 +926,86 @@ a.soft-button {
   color: #548477;
   font-size: 11px;
 }
+
+
+/* 🟦 #STORAGE_DEVELOPMENT — A clear, separate home for storage research. */
+.storage-launcher {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 20px clamp(20px, 6vw, 68px) 0;
+  padding: 24px;
+  border: 1px solid #e8e5d8;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #fffaf0, #f8fbfc);
+}
+.storage-launcher-copy {
+  max-width: 720px;
+}
+.storage-launcher h2 {
+  margin: 0;
+  font-size: clamp(21px, 3vw, 27px);
+  letter-spacing: -0.6px;
+}
+.storage-launcher-copy > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.storage-details {
+  margin-top: 16px;
+}
+.storage-details summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  cursor: pointer;
+}
+.storage-details summary::-webkit-details-marker {
+  display: none;
+}
+.storage-details[open] summary span {
+  transform: rotate(45deg);
+}
+.storage-details-content {
+  margin-top: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: #fff;
+}
+.storage-details-content p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.storage-details-content p:first-child {
+  color: var(--ink);
+}
+.storage-details-content a {
+  color: #1684a8;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+.storage-details-content a:hover {
+  text-decoration: underline;
+}
+.development-label {
+  flex: 0 0 auto;
+  padding: 8px 11px;
+  border: 1px solid #e9d8a8;
+  border-radius: 20px;
+  background: #fff6dd;
+  color: #806323;
+  font-size: 11px;
+  font-weight: 800;
+}
+@media (max-width: 720px) {
+  .storage-launcher {
+    flex-direction: column;
+  }
+}
