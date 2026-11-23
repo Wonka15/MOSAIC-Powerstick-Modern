@@ -13,11 +13,11 @@ A mobile-friendly companion and preservation project for the MOSAIC Powerstream 
 - **MOSAIC Storage — In Development:** Explains the known storage features and the ongoing investigation into how the original app accesses files.
 - **Research archive:** Preserves product history, original videos, company background, engineering research, and project notes.
 
-## Important: storage access is not implemented yet
+## Storage research: VLC playback verified, browser access in development
 
-The original MOSAIC mobile app can browse Videos, Photos, Music, and Documents, and can play selected videos. We have not yet confirmed the protocol the app uses to communicate with the PSTR2 or how a modern browser can safely access its files.
+A real-device test confirmed that **VLC for iPad 3.7.4** can connect to the PowerStick over SMB and play a video directly from its storage. The tested sequence is: connect the iPad to MOSAIC Wi-Fi → open VLC → add a server → enter `192.168.10.1` → choose SMB → enter username `admin` and the device password → connect → open `Public` → open `SDA1`.
 
-The website therefore does **not** currently browse, list, upload, download, or stream files from MOSAIC. The old sample file browser has been removed so visitors are not misled by pretend folders or demo media.
+The website itself does **not** yet browse, list, upload, download, or stream files from MOSAIC. GitHub Pages cannot directly open SMB connections or raw TCP sockets. A browser-compatible method still needs to be investigated. See the [tested VLC instructions and network research](research.html#vlc-storage) and the [technical network-discovery log](docs/research/network-discovery.md). All device exploration remains read-only.
 
 ## Project direction
 
