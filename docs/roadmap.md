@@ -138,6 +138,23 @@ OpenWrt is a research lead, not a current project dependency. Some RT5350 device
 
 **Completion criteria:** A written go/no-go decision with a tested recovery plan. If the original firmware already provides the needed functions, keep it.
 
+## Phase 7 — Battery assessment and possible replacement (future hardware work)
+
+**Goal:** Preserve the original 4,500 mAh MOSAIC battery system and determine whether a safe, compatible replacement is practical if the battery eventually fails.
+
+**Current status:** Not started. The user does not currently have access to the internal battery or enclosure, and the label's 4,500 mAh capacity does not identify the cell chemistry, voltage, dimensions or pack arrangement.
+
+Tasks:
+- Keep the original device closed and in its current condition during the present external-only research.
+- If the battery becomes accessible through a qualified repair technician, photograph its label and wiring and record the exact pack voltage, chemistry, dimensions, connector, polarity and any protection/temperature-sensor circuitry.
+- Identify the original charging requirements and protection circuit before sourcing any replacement.
+- Compare replacement packs by exact electrical and physical compatibility, not capacity alone.
+- Preserve the original battery protection and charging system where appropriate; have a qualified technician perform the repair.
+- Never solder directly to a bare lithium-ion cell. Use a correctly specified tabbed pack or suitable connector and professional cell-handling methods.
+- Do not buy a replacement cell, open the enclosure, or attempt a battery modification until the original pack has been positively identified and a safe repair plan exists.
+
+**Completion criteria:** A documented, verified battery specification and a qualified repair plan—or a clear decision to leave the original battery untouched if a safe compatible replacement cannot be established.
+
 ## Research references
 
 - [Hardware and company-history investigation](hardware-and-company-history.md) — board photo identification, RT5350F, Power7 comparison, Ottawa reporting and FCC context.
@@ -150,4 +167,4 @@ OpenWrt is a research lead, not a current project dependency. Some RT5350 device
 
 ## Next practical milestone
 
-**Identify the RAM and flash chips on the user's actual MOSAIC board.** This is the next high-value step because memory capacity and firmware storage constrain every later decision. Then document the normal login and file-browsing behavior before attempting any software changes.
+**Continue external-only documentation of normal login, Wi-Fi configuration, app folder browsing and video playback.** Internal RAM/flash identification is deferred because the user does not currently have access to the internals. Keep battery replacement as a future, technician-led assessment—not a current disassembly task.
