@@ -133,3 +133,15 @@ Reference: [OpenWrt — Tenda A6 / RT5350F hardware notes](https://openwrt.org/t
 The strongest new finding is that the user's MOSAIC board appears to contain a **Ralink RT5350F**. This makes the Power7 RT5350 Wi-Fi storage product a valuable 2015-era comparison. Historical reporting also indicates that PowerStick hand-assembled MOSAIC products onsite in Ottawa in 2016, while later FCC records identify John Zhu as an engineering contact for other PowerStick products.
 
 The evidence supports further investigation of an embedded networking platform. It does **not** yet prove a shared Power7 board, a Chinese OEM relationship for MOSAIC, Linux/OpenWrt firmware, or the exact memory and storage architecture.
+
+
+## 5A. Ralink-derived web-interface clue
+
+During a separate read-only review, the owner supplied the MOSAIC local interface's `/lang/b28n.js` localization script. The script identifies itself as a modified Butterfat/Butterlate-style localization helper and includes the attribution email `winfred_lu@ralinktech.com.tw`.
+
+This is consistent with the web interface drawing on Ralink-era embedded router software. Combined with the board's apparent **Ralink RT5350F** marking, it strengthens the interpretation that MOSAIC is built around an embedded Ralink networking platform and uses a router-style embedded administration interface.
+
+**Evidence boundary:** the email attribution is a software-lineage clue, not proof of the exact firmware package, operating system, source-code provenance, or firmware build. The script's observed role is localization: it reads a language cookie, defaults to English, and loads language message XML. It does not itself establish Wi-Fi control, battery monitoring, or battery telemetry.
+
+The local interface's supplied homepage also loads `/quick/common.css` and links to `/quick/apcli.asp` (Wi-Fi scan/connect) and `/quick/wifi_basic.asp` (wireless security). These observations support the embedded-router-interface conclusion, but do not identify a battery-status endpoint.
+
